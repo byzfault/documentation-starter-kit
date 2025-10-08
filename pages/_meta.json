@@ -1,15 +1,13 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "approach": "Documentation Approach",
+  "experience": "Experience",
+  "skills": "Skills & Technologies",
+  "portfolio": "Portfolio",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "mailto:consult@jamesaindow.co.uk",
     "newWindow": true
   }
 }

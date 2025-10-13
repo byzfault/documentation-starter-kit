@@ -1,0 +1,120 @@
+# Writing Samples
+
+<Callout type="info">
+**Note:** These samples represent different styles, audiences, and technical depths. Click through to see how I adapt documentation to context.
+</Callout>
+
+## Starknet Documentation
+
+I owned the entirety of [docs.starknet.io](https://docs.starknet.io) from 2022-2023. While the design has evolved, much of the core content remains from my work.
+
+### Featured Pages
+
+<Cards>
+  <Card
+    title="Advanced Factory Pattern"
+    href="https://docs.starknet.io/build/starknet-by-example/applications/advanced-factory"
+    description="Complex smart contract pattern with Cairo code examples"
+  />
+  <Card
+    title="Account Abstraction"
+    href="https://docs.starknet.io/architecture-and-concepts/accounts/account-abstraction/"
+    description="Conceptual documentation explaining StarkNet's account model"
+  />
+  <Card
+    title="Starknet Architecture"
+    href="https://docs.starknet.io/architecture-and-concepts/network-architecture/"
+    description="High-level architecture documentation"
+  />
+</Cards>
+
+**What these demonstrate:**
+- **Technical depth** - Zero-knowledge proofs, Cairo smart contracts, cryptographic concepts
+- **Code examples** - Working, tested code samples with explanations
+- **Multiple audiences** - From beginners to advanced developers
+- **Clear structure** - Scannable, navigable, hierarchical information
+
+---
+
+## Klevu Documentation
+
+I built [docs.klevu.com](https://docs.klevu.com) from scratch 2019-2021. The site has evolved since, but the foundational content and structure remain.
+
+### Representative Sections
+
+<Cards>
+  <Card
+    title="JavaScript Integration"
+    href="https://docs.klevu.com"
+    description="Frontend SDK documentation and integration guides"
+  />
+  <Card
+    title="API Reference"
+    href="https://docs.klevu.com"
+    description="REST API documentation for search and recommendations"
+  />
+</Cards>
+
+**What these demonstrate:**
+- **E-commerce expertise** - Understanding merchant and developer needs
+- **API documentation** - Complete reference documentation with examples
+- **Integration guides** - Multi-platform integration paths
+- **Audience adaptation** - Technical and non-technical readers
+
+---
+
+## This Portfolio Site
+
+**Meta-documentation example:** This entire site is a writing sample.
+
+**What it demonstrates:**
+- **Nextra/Docusaurus proficiency** - Custom documentation site setup
+- **Information architecture** - Structure that serves multiple goals
+- **Clever concept execution** - Portfolio as documentation
+- **Component usage** - Callouts, tabs, cards, steps used appropriately
+
+---
+
+## Documentation Philosophy in Action
+
+### Before & After Example
+
+**Typical technical writing:**
+> "The `transfer` function moves tokens from one address to another. It takes two parameters: `recipient` (address) and `amount` (uint256)."
+
+**My approach:**
+> **Transferring Tokens**
+> 
+> Use `transfer()` to send tokens to another address:
+> 
+> ```solidity
+> token.transfer(recipient, amount);
+> ```
+> 
+> **Parameters:**
+> - `recipient`: Destination address (must be valid Ethereum address)
+> - `amount`: Number of tokens to transfer (in smallest unit)
+> 
+> **Important:** This function will revert if your balance is insufficient. Check `balanceOf()` first if handling user input.
+> 
+> **Common pitfalls:**
+> - ❌ Forgetting to approve tokens for contracts
+> - ❌ Not handling transaction failures
+> - ✅ Always validate addresses before transferring
+
+**The difference:**
+- Context before code
+- Working example
+- Common mistakes prevented
+- Actionable guidance
+
+---
+
+## Request Custom Samples
+
+Need to see documentation for a specific:
+- Technical domain?
+- Audience type?
+- Documentation format?
+
+→ [Contact me](/contact) and I can provide relevant samples or create a custom example.

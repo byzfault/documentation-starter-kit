@@ -1,13 +1,33 @@
 {
   "index": "Introduction",
-  "approach": "Documentation Approach",
-  "experience": "Experience",
-  "skills": "Skills & Expertise",
-  "portfolio": "Portfolio",
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "mailto:consult@jamesaindow.co.uk",
-    "newWindow": true
-  }
+  "quick-start": "Quick Start",
+  "---": {
+    "type": "separator",
+    "title": "Core Concepts"
+  },
+  "approach": "Documentation Philosophy",
+  "architecture": "Professional Architecture",
+  "---2": {
+    "type": "separator", 
+    "title": "API Reference"
+  },
+  "skills": "Technical Capabilities",
+  "tools": "Tools & Frameworks",
+  "---3": {
+    "type": "separator",
+    "title": "Integration Guides"
+  },
+  "case-studies": "Case Studies",
+  "writing-samples": "Writing Samples",
+  "---4": {
+    "type": "separator",
+    "title": "Troubleshooting"
+  },
+  "known-issues": "Known Issues",
+  "faq": "FAQ",
+  "---5": {
+    "type": "separator",
+    "title": "Support"
+  },
+  "contact": "Contact"
 }

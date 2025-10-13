@@ -2,11 +2,12 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>James Aindow - Technical Writer</span>,
-  chat: {
-    link: 'https://discord.com',
+  logo: <span>James Aindow — Technical Writer</span>,
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s'
+    }
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
     text: 'Bridging the gap between technical and non technical',
   },

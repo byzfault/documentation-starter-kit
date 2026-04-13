@@ -2,7 +2,7 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>James Aindow — Technical Writer</span>,
+  logo: <span>James Aindow — Senior Technical Writer</span>,
 
   useNextSeoProps() {
     return {

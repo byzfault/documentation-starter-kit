@@ -1,124 +1,98 @@
 import { Callout } from 'nextra/components'
 
-# Professional Architecture
+# Architecture & Audits
 
-## System Overview
+Independent consultancy work: architecture reviews, code and platform audits, and solutions architecture for product companies. This is the work clients bring me in for when they need somebody who can read the system and then tell them the truth about it.
 
-16 years of evolution from writing code to writing about code. Each role built on the previous, creating a unique combination of skills that makes me effective as a technical writer.
+## Architecture Reviews
 
-**Career progression:**  
-Web Developer → Technical Lead → Technical Director → Solutions Architect → Technical Writer → Documentation Engineer
+**What a review covers:**
 
-## Evolution History
+- Platform and integration architecture, including where the coupling actually is rather than where the diagram says it is
+- Data flows, ownership boundaries and failure modes
+- DevOps, CI/CD, environment parity and release risk
+- Scalability under the load the business expects, not the load the current traffic suggests
+- Security and compliance posture at the architectural level
 
-### v1.0: Web Developer (2010–2014)
-**Core competencies developed:**
-- PHP, JavaScript, HTML/CSS
-- Database design and optimization
-- E-commerce platforms (Magento, custom builds)
-- Client communication and requirements gathering
-
-**Key learning:** Understanding how developers think and what they need to be successful.
-
----
-
-### v1.5: Technical Lead (2014–2017)
-**Core competencies developed:**
-- Team leadership and mentoring
-- Code review and quality standards
-- Project planning and delivery
-- Technical decision-making
-
-**Key learning:** How to communicate technical concepts to non-technical stakeholders.
-
----
-
-### v2.0: Technical Director (2017–2019)
-**Core competencies developed:**
-- System architecture design
-- DevOps and CI/CD pipelines
-- Performance optimization
-- Business strategy and technical roadmapping
-
-**Key learning:** Seeing the bigger picture beyond just code.
-
----
-
-### v2.5: Solutions Architect & Consultant (2019–2022)
-**Core competencies developed:**
-- Enterprise integrations
-- Payment systems (Stripe, PayPal, custom)
-- API design and documentation
-- Client advisory and problem-solving
-
-**Key learning:** How to quickly understand complex systems and explain them clearly.
-
----
-
-### v3.0: Technical Writer (Sep 2022 – Nov 2023)
-**Company:** Starknet Foundation (Ethereum L2, ZK-rollup built on STARK proofs)
-**Scope:** Sole owner of all developer documentation for Ethereum Layer 2 protocol
-
-**What I built:**
-- Complete documentation suite for zero-knowledge proof system
-- Cairo smart contract language guides
-- Integration tutorials for dApp developers
-- API reference documentation
-- Collaboration framework with cryptographers and protocol engineers
-
-**Key learning:** The power of excellent documentation to accelerate developer adoption.
+**What the client gets:** a written assessment with findings ranked by risk and cost to fix, a target architecture, and a sequenced route from one to the other. Written so the CTO and the finance director can both act on it.
 
 <Callout type="info">
-**Why the transition?**
-
-After 15 years of building systems, I discovered I loved the challenge of explaining complex technical concepts more than building the systems themselves. Documentation engineering combines both—writing clarity with technical infrastructure.
+**Why the written output matters.** An architecture review that lives in somebody's head or in a two-hour call gets forgotten by the next planning cycle. The document is the deliverable. It has to survive contact with people who were not in the room.
 </Callout>
 
 ---
 
-### v3.5: Independent Technical Writer (2022–2025)
-**Focus:** Documentation consulting with emphasis on Web3, SaaS, and technical infrastructure
+## Code and Platform Audits
 
-**Specializations:**
-- Blockchain protocols and smart contracts
-- API documentation
-- Developer experience optimization
-- Documentation infrastructure (Docusaurus, Nextra, custom tooling)
+Audits usually start with one of three questions: can this codebase carry the roadmap, what did we actually buy in that acquisition, or why does every release hurt.
+
+**What I look at:**
+
+- Code quality, test coverage and the real cost of change in the hot paths
+- Dependency health, upgrade debt and abandoned libraries
+- Build and deployment pipeline, including how long it takes to get a fix to production
+- Documentation and knowledge concentration, meaning who has to be awake for the system to be fixable
+- Delivery process, estimation accuracy and where the time is going
+
+**Tone of the output:** direct. Clients are paying for an assessment, not reassurance. I flag what is fine as clearly as I flag what is not, because a report where everything is a problem is as useless as one where nothing is.
 
 ---
 
-### v4.0: Senior Technical Writer — Payments Infrastructure (2025–Present)
+## Klevu · Senior Solutions Architect (2019–2021)
 
-**Company:** Mastercard (MDES Manager)
-**Scope:** Senior contract technical writer, leading full documentation and UX content overhaul for MDES Manager — Mastercard's self-service tokenisation platform used by banks, issuers, processors, and payment service providers
+AI-powered site search for e-commerce, sold to merchants and implemented by agencies. I came in on the architecture and implementation side, covering how the product got into complex retail stacks and what had to be true for it to work.
 
-**What I delivered:**
-- Full structural and editorial overhaul of the 379-page MDES Manager User Guide in DITA XML
-- UX microcopy revision across 100+ product screens, establishing 12 reusable content patterns
-- 14 customer-facing delivery guides structured for dual readability (human and LLM/RAG retrieval), informed by analysis of 949 support tickets
-- Contributed to scoping a conversational AI assistant for MDES, benchmarked against Klarna, Bank of America Erica, and Morgan Stanley's internal KB deployment
+**The problem:** the platform was capable, and every implementation was different. Merchants, agencies and in-house developers were all integrating along different paths, and the fastest way to unblock them was not more support headcount.
 
-**Key learning:** Enterprise payments infrastructure documentation requires the same rigour as protocol documentation — but the audience is financial institutions, not developers. Mastercard's brand writing standards, W3C COGA accessibility guidelines, and DITA XML structured authoring are the discipline.
+**What I owned:**
 
-## Technical Stack Evolution
+- Integration architecture across Magento, Shopify, BigCommerce and custom platforms
+- Solution design with merchants and implementation partners, including pre-sales technical scoping
+- The full technical documentation estate: integration guides, Search, Recommendations and Analytics API references, JavaScript SDK guides, merchant configuration and tuning
+- Platform setup on GitBook, information architecture, contribution workflow and search
+- Feeding recurring integration failures back into the product and engineering roadmap
 
-**Development era:**
-- Languages: PHP, JavaScript, Python, Node.js
+**Where my background mattered:** I had already spent years delivering enterprise e-commerce for retail brands. I knew what a merchant's stack looks like from the inside, which edge cases were coming, and why an integration that works in a demo falls over against a real catalogue.
+
+**Outcome:** agencies could integrate without a support ticket for every project, onboarding time dropped, and the technical content became something sales could put in front of a prospect.
+
+---
+
+## Consultancy Engagements
+
+Independent architecture and delivery consulting, with an emphasis on Web3, SaaS and technical infrastructure.
+
+**Typical engagement shapes:**
+
+- Fixed-scope architecture or code audit with a written report and a follow-up session
+- Solution design for a specific integration or migration
+- Delivery review where a programme is late and nobody can agree on why
+- Interim technical leadership while a client hires permanently
+
+**How I price it:** by scope, agreed up front. I would rather turn down work than take a mandate that cannot succeed.
+
+---
+
+## Technical Ground
+
+**Engineering:**
+- Languages: PHP, JavaScript, TypeScript, Python, Node.js
 - Frameworks: React, Next.js, Laravel, Express
 - Infrastructure: AWS, Docker, Kubernetes, CI/CD
 - Databases: MySQL, PostgreSQL, MongoDB, Redis
 
-**Documentation era:**
-- Platforms: DITA XML (structured authoring), DITA-OT (PDF generation), Docusaurus, Nextra, GitBook, AsciiDoc
-- Languages: Markdown, MDX, reStructuredText, AsciiDoc
-- Tools: Git, GitHub Actions, Vale, markdownlint, Claude Code CLI
-- Technologies documented: Solidity, Cairo, Rust, zkSNARKs/STARKs, Layer 2 protocols
+**Domains:**
+- Enterprise e-commerce, ERP, PIM and fulfilment integration
+- Payment integration and card tokenisation
+- Layer 2 blockchain protocols, smart contracts, ZK proof systems
+- Site search, recommendations and merchandising platforms
 
-## Migration Path
+**Reading, not shipping:** Solidity, Cairo, Rust. Enough to review, document and hold a technical conversation, not enough to claim I would ship production contracts.
 
-This architecture makes me uniquely effective because I can:
-1. **Understand your codebase** without extensive hand-holding
-2. **Build documentation infrastructure** not just write content
-3. **Debug technical issues** in the docs deployment pipeline
-4. **Collaborate effectively** with senior engineers and cryptographers
-5. **Think systematically** about documentation as product
+---
+
+## Next
+
+→ [Delivery Track Record](/delivery) for the CTO and agency delivery history
+→ [Tools & Platforms](/tools) for the working stack
+→ [Contact](/contact) to discuss an audit or review

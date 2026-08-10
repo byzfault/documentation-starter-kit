@@ -1,7 +1,7 @@
 {
   "name": "nextra-docs-template",
   "version": "0.0.1",
-  "description": "James Aindow - Senior Technical Writer",
+  "description": "James Aindow - Senior Technical Leader, Programme Delivery & Solutions Architecture",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

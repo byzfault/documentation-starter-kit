@@ -1,0 +1,57 @@
+import { Callout } from 'nextra/components'
+
+# Starknet · Ethereum Layer 2
+
+**Engagement:** 2022–2023
+**Product:** Starknet, a validity rollup on Ethereum built on STARK proofs
+**Remit:** Sole owner of docs.starknet.io and cairo-lang.org through the testnet-to-mainnet transition
+
+Starknet was moving from testnet to mainnet with a new programming language, a proof system most developers had never touched, and an ecosystem of teams waiting to build on it. I owned the entire developer-facing documentation estate across both properties, alone, through that transition.
+
+## The Situation
+
+Bleeding-edge protocol work with almost no precedent to reference. Cairo was new, so there was no established body of material to draw on. The protocol was still being finalised while developers were already building against it. Every question a developer had went to a core engineer, and core engineers were the scarcest resource in the organisation.
+
+## Scope
+
+Two properties, one owner:
+
+- **docs.starknet.io** · protocol architecture, account abstraction, the sequencer and prover model, data availability, JSON-RPC reference, wallet and tooling integration, migration guidance for Ethereum teams
+- **cairo-lang.org** · the Cairo language: syntax, contract patterns, tooling, getting started paths from zero to a deployed contract
+
+Alongside the content: the Docusaurus platform, the CI/CD deployment pipeline, contribution guidelines for open-source contributors, and the review process that kept accuracy intact as the protocol moved.
+
+## Decisions That Shaped It
+
+**Go to the source, not through a translator.** I worked directly with cryptographers and protocol engineers. Being able to hold the conversation without everything pre-digested meant faster turnaround and better questions, and it kept the demand on core engineering low.
+
+**Ship against the protocol's timeline, not a documentation timeline.** Mainnet had a date. Documentation that arrives after launch is a post-mortem. I published against what was decided and revised as things settled, which meant accepting that some pages would change twice.
+
+**Build the pipeline early.** Docs-as-code with automated deployment, so publishing was never the bottleneck and external contributors could open pull requests against the same workflow the team used.
+
+**Separate the two audiences properly.** Protocol readers and application developers want different things from the same technology. Splitting the estate across the two properties kept each one coherent instead of forcing a compromise on both.
+
+<Callout type="info">
+**Working with research teams.** Cryptography and protocol engineers are precise people working on problems that are genuinely hard to explain. The way in is to do the homework first and arrive with a specific claim to correct, rather than an open request to be taught.
+</Callout>
+
+## Stakeholders
+
+Core protocol engineers, cryptography researchers, the DevRel team carrying developer feedback, ecosystem teams building on the network, and marketing coordinating launch messaging.
+
+## Outcomes
+
+- A complete documentation estate live and aligned with the mainnet release
+- Developers onboarding to a new language and proof system through self-service material
+- A deployment pipeline and contribution process that outlasted the engagement
+- Documentation standards that stayed in place after I left
+
+## Why This Matters for Payments and Stablecoin Work
+
+Layer 2 infrastructure, settlement assurance and the economics of moving value on-chain are the ground stablecoin infrastructure is built on. I have worked inside that technology at protocol level, under launch pressure, as the single owner of an estate the whole ecosystem depended on. Combined with the Mastercard tokenisation work, that covers both sides of where payments is heading.
+
+---
+
+→ [Mastercard MDES](/mastercard) for the payments tokenisation contract
+→ [Architecture & Audits](/architecture) for consultancy work
+→ [Contact](/contact) to discuss a role

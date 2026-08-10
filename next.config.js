@@ -3,4 +3,13 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
-module.exports = withNextra()
+module.exports = withNextra({
+  async redirects() {
+    return [
+      // Pages re-homed during the 3.0 restructure
+      { source: '/case-studies', destination: '/mastercard', permanent: true },
+      { source: '/writing-samples', destination: '/writing', permanent: true },
+      { source: '/approach', destination: '/writing', permanent: true },
+    ]
+  },
+})

@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "jamesaindow-co-uk",
   "version": "0.0.1",
-  "description": "James Aindow - Senior Technical Leader, Programme Delivery & Solutions Architecture",
+  "description": "James Aindow - Forward Deployed Engineer & Solutions Architect",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/byzfault/documentation-starter-kit"
   },
-  "author": "",
-  "license": "",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
+  "author": "James Aindow <consult@jamesaindow.co.uk>",
+  "license": "MIT",
+  "homepage": "https://www.jamesaindow.co.uk",
   "dependencies": {
     "next": "^13.0.6",
     "next-mdx-remote": "6.0.0",

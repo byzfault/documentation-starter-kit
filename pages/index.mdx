@@ -1,92 +1,39 @@
----
-title: "James Aindow · Forward Deployed Engineer"
-description: "Forward Deployed Engineer and solutions architect. Twenty years in engineering, twice CTO, currently contracting at Mastercard on MDES card tokenisation. Discovery to deployment, built with agentic AI tooling."
----
-
 import { Callout, Cards, Card } from 'nextra/components'
-import { ProjectCard, ProjectGrid } from '../components/project-card'
 
-# James Aindow
+# James Aindow · Senior Technical Leader
 
-**Forward Deployed Engineer · Solutions Architect**
+**Programme Delivery & Solutions Architecture**
 
-> **Last updated:** August 2026 | **Version:** 4.0
-
-I am a 20-year technologist and twice CTO, currently contracting at Mastercard on MDES card tokenisation, delivering AI-era solutions from discovery to deployment.
+> **Profile status:** Available | **Last updated:** August 2026 | **Version:** 3.0
 
 <Callout type="info">
-**Why this site reads like documentation.** It is how I handle a complex system. Structure first, then the detail, with every claim tied to something I delivered. The [portfolio](/portfolio) is the part worth reading.
+**Why this site reads like documentation:** Because this is how I handle complex systems. Structure first, then the detail, with every claim tied to something I actually delivered. If you want to see how I would lay out a delivery plan, an architecture review or a platform's technical content, you are looking at it.
 </Callout>
 
-## The position
+## Overview
 
-Forward Deployed Engineer is the role I am targeting. It is also the shape of the work I have been doing since 2010: sit with the customer, find out what the problem actually is, scope it, design it, build the first working version, then get it into production and hand it over.
+Twenty years in engineering, most of it running the delivery. Two CTO roles, at Folk Digital in the UK and Shero Commerce in the US, with lead developer and senior solutions architect posts before them. I have managed distributed engineering teams of up to 20 and owned platform architecture, DevOps, CI/CD and delivery standards. At both agencies I worked at owner level on the strategic technical calls. The build history is enterprise e-commerce for brands including Wedgwood, Hackett London, Turnbull & Asser, MADE.COM and Pernod Ricard.
 
-The route here was developer, DevOps engineer, lead engineer, CTO at Folk Digital in the UK, CTO again at Shero Commerce in New York, senior solutions architect at Klevu, then independent consulting. Since November 2025 I have been contracting inside Mastercard's tokenisation platform.
+Recent contracts sit inside payments and blockchain infrastructure. At Mastercard I have led the documentation and UX content overhaul for MDES Manager, the tokenisation platform behind Apple Pay, Google Pay and digital wallets across the network. That work covers a 379-page user guide consolidated to roughly 200 pages in DITA XML, content across more than 100 product screens, and R&D on a proof of concept AI assistant for the platform. Before Mastercard came Starknet, an Ethereum Layer 2, where I was sole owner of docs.starknet.io and cairo-lang.org through the testnet-to-mainnet transition.
 
-There is a gap in that route. I was primary caregiver for twin boys from October 2023 to October 2025, and returned to contract work in November 2025.
+I am now targeting senior delivery and architecture roles in payments and stablecoin infrastructure. Technical Programme Manager, Delivery Lead, Solutions Architect. Contract or permanent.
 
-**On code, plainly.** I read and review code and have done for twenty years. I do not hand-write production code today. I ship with agentic tooling: Claude Code CLI, used daily in client delivery and to build the tools in the portfolio below.
+**What makes this profile unusual:** I have run the engineering, and I can write it up to publication standard. Most delivery leads hand the explaining to somebody else. I read the architecture, make the call, then produce the document that gets signed off by the people paying for it.
 
-## What I own on an engagement
-
-- **Discovery.** Customer workshops and technical discovery, including the part where the stated problem turns out not to be the problem
-- **Scoping.** Proposals, estimates, MVP definition, sequencing
-- **Architecture.** Integration design across modern and legacy systems, APIs, auth, payments
-- **Build.** AI-assisted delivery from prototype to production
-- **Stakeholders.** Steering sessions and competing feedback, adjudicated with the reasoning written down
-- **Deployment.** CI/CD, release, handover to the team that keeps it
-
-## Selected work
-
-**Mastercard, MDES Manager.** Contract, November 2025 to present. Mastercard's self-service card tokenisation platform, used by banks, issuers and processors to configure card products for Apple Pay, Google Pay and Samsung Pay. I analysed 949 customer support tickets to find where integrators get stuck, then scoped the programme around those failure points. A 379-page estate became a 200-page guide. Twelve reusable patterns were adopted across more than 100 product screens. [Full case study](/mastercard).
-
-**Starknet Foundation.** Contract, September 2022 to October 2023. Sole owner of the developer-facing surface of an Ethereum Layer 2 through its testnet-to-mainnet launch, working alongside core engineers and ZK cryptographers. [Full case study](/starknet).
-
-**Brand Alley.** Senior solutions architect on a replatform, 2019 to 2020. Led the data migration: 6 million products and 2 million customer entities.
-
-## Portfolio
-
-Tools I scoped, built and deployed myself with Claude Code.
-
-<ProjectGrid>
-  <ProjectCard
-    title="Stablecoin Flow Dashboard"
-    status="build"
-    repo="https://github.com/byzfault/stablecoin-tracker"
-    kicker="On-chain analytics. Solo build, 2026."
-    problem="Stablecoin supply data is spread across issuers and chains, and most of what is published is a single headline number with no way to see where the supply actually sits."
-    approach="A static dashboard tracking supply by chain and issuer, focused on Ethereum, Tron and Solana across eight tracked chains, from daily DefiLlama snapshots committed into the repo. No live API calls at render time, so a slow upstream cannot break the page."
-    stack={['Python', 'DefiLlama API', 'Static HTML', 'GitHub Actions']}
-  />
-  <ProjectCard
-    title="Solana Wallet Finder"
-    status="build"
-    kicker="Wallet analysis. Solo build, 2026."
-    problem="Finding the wallets worth watching on Solana means cross-referencing token buyers by hand, and the obvious question, which wallets bought all of these tokens and which of them are any good, has no cheap answer."
-    approach="A local toolkit over one shared server, cache and API budget: Triangulate finds the wallets that bought a set of tokens, Copy Tracker works out who a profitable wallet is following, and a usage view keeps the API spend visible."
-    stack={['Node.js', 'TypeScript', 'Solana Tracker API']}
-  />
-</ProjectGrid>
-
-→ [Full portfolio](/portfolio), including this site.
-
-## Other lanes
-
-The same twenty years, cut a different way.
+## Quick Links
 
 <Cards>
-  <Card title="Solutions Architect" href="/solutions-architect" />
-  <Card title="Technical Programme Manager" href="/technical-programme-manager" />
-  <Card title="Documentation Lead" href="/documentation-lead" />
+  <Card title="Quick Start" href="/quick-start" />
+  <Card title="Delivery Track Record" href="/delivery" />
+  <Card title="Mastercard MDES" href="/mastercard" />
+  <Card title="Contact" href="/contact" />
 </Cards>
 
-## Domains
+## Key Capabilities
 
-Payments and card tokenisation. Blockchain and on-chain data. Enterprise e-commerce, which is where the first fifteen years went and where brands including Wedgwood, Hackett London, Turnbull & Asser, Finisterre and MADE.COM sat.
-
-## Availability
-
-Remote, UK based, available now. Permanent or contract. Forward Deployed Engineer, Solutions Engineer and senior technical consulting roles across commerce, payments and AI platforms.
-
-→ [consult@jamesaindow.co.uk](mailto:consult@jamesaindow.co.uk) · [Contact](/contact)
+- **Programme delivery and team leadership:** CTO at two agencies, distributed teams of up to 20, delivery standards and release process owned end to end. Comfortable at owner and board level on the technical decisions that carry commercial risk
+- **Solutions architecture:** Platform architecture, integrations, DevOps and CI/CD across enterprise e-commerce and SaaS. Senior solutions architect at Klevu, working with merchants, agencies and in-house engineering teams
+- **Payments and tokenisation:** Mastercard MDES Manager, the card tokenisation platform used by issuers, processors and payment service providers. Scope, stakeholder management and delivery across a global product team
+- **Blockchain infrastructure:** Sole owner of Starknet's developer documentation estate through mainnet launch, working directly with cryptographers and protocol engineers
+- **Communication at publication quality:** Structured authoring in DITA XML at Mastercard scale, docs-as-code pipelines, UX content, and technical material that holds up in front of banks and regulators
+- **Available now:** Remote, UK based. Contract from £600/day, or permanent for the right role. Payments, stablecoin infrastructure, fintech and developer platforms

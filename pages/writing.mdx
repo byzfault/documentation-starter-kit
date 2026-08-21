@@ -1,0 +1,97 @@
+import { Callout } from 'nextra/components'
+
+# Writing & Documentation
+
+Writing is a capability I bring to delivery and architecture work, not a separate career. It is the reason my architecture reviews get acted on and my delivery decisions survive the people who made them leaving. This page holds the samples and the method.
+
+<Callout type="info">
+**Where this sits.** Two recent contracts were content-led: [Mastercard MDES](/mastercard) and [Starknet](/starknet). Both are told as delivery stories on their own pages, because that is what they were. This page is about the craft underneath them.
+</Callout>
+
+## Samples
+
+### Starknet
+
+I owned [docs.starknet.io](https://docs.starknet.io) and [cairo-lang.org](https://www.cairo-lang.org) from 2022 to 2023. The design has moved on since, and a good deal of the core content is still mine.
+
+**What it demonstrates:** zero-knowledge proof systems and a new smart contract language explained without a maths degree, working code samples, and one estate serving protocol researchers and application developers at the same time.
+
+### Klevu
+
+I built the technical documentation estate at [docs.klevu.com](https://docs.klevu.com) alongside the solutions architecture work, 2019 to 2021.
+
+**What it demonstrates:** multi-platform integration guides, complete API reference, and material written for merchants and developers who need different things from the same product.
+
+### Mastercard MDES
+
+Enterprise structured authoring in DITA XML, under Mastercard brand standards and W3C COGA accessibility guidance. The output is not public. The scope and approach are on the [MDES page](/mastercard).
+
+### This Site
+
+A working sample in itself. Nextra, custom information architecture, component usage, and a conceit carried consistently across a dozen pages without becoming a joke that outstays its welcome.
+
+---
+
+## Method
+
+### Documentation is a product
+
+It needs information architecture, a maintenance owner, a release process and a feedback loop. Treated as a chore at the end of a sprint, it rots inside a quarter.
+
+### Clarity before cleverness
+
+The goal is a reader who can act. Precision matters and so does plain language, and where those two pull apart, I keep the precision and rewrite the sentence.
+
+### Write from the system, not about it
+
+I read the code, run the product and test the procedure before documenting it. That is why the first draft is usually accurate, and why I find gaps the engineering team had stopped seeing.
+
+### Structure for retrieval
+
+Self-contained topics, explicit headings, no meaning buried in the transition between paragraphs. This has always been good practice for a reader scanning a page. It is now also what makes content usable by an internal assistant, which enterprise clients increasingly expect.
+
+---
+
+## Before and After
+
+**Typical reference entry:**
+
+> "The `transfer` function moves tokens from one address to another. It takes two parameters: `recipient` (address) and `amount` (uint256)."
+
+**How I would write it:**
+
+> **Transferring tokens**
+>
+> Use `transfer()` to send tokens to another address:
+>
+> ```solidity
+> token.transfer(recipient, amount);
+> ```
+>
+> **Parameters:**
+> - `recipient`: destination address (must be a valid Ethereum address)
+> - `amount`: number of tokens to transfer, in the smallest unit
+>
+> **Important:** this reverts if your balance is insufficient. Check `balanceOf()` first when handling user input.
+>
+> **Common pitfalls:**
+> - ❌ Forgetting to approve tokens for contracts
+> - ❌ Not handling transaction failures
+> - ✅ Validating addresses before transferring
+
+**The difference:** context arrives before the code, the example runs, the failure case is named, and the reader knows what to do next.
+
+---
+
+## Tooling
+
+**Structured authoring:** DITA XML, DITA-OT for PDF output, AsciiDoc
+**Docs-as-code:** Docusaurus, Nextra, GitBook, MkDocs, Markdown, MDX
+**Quality:** Vale, markdownlint, review workflows in Git
+**Pipelines:** GitHub Actions, GitLab CI, Vercel, Netlify
+
+---
+
+## Request Something Specific
+
+Need to see material for a particular domain, audience or format? → [Get in touch](/contact) and I will send something relevant or write a short custom example.

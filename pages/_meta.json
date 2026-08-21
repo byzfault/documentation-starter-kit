@@ -1,27 +1,35 @@
 {
   "index": "Introduction",
-  "portfolio": "Portfolio",
+  "quick-start": "Quick Start",
   "---": {
     "type": "separator",
-    "title": "Lanes"
+    "title": "Delivery Track Record"
   },
-  "solutions-architect": "Solutions Architect",
-  "technical-programme-manager": "Technical Programme Manager",
-  "documentation-lead": "Documentation Lead",
+  "delivery": "Leadership & Delivery",
   "---2": {
     "type": "separator",
-    "title": "Case Studies"
+    "title": "Architecture & Audits"
+  },
+  "architecture": "Consultancy, Audits & Klevu",
+  "tools": "Tools & Platforms",
+  "---3": {
+    "type": "separator",
+    "title": "Payments & Blockchain"
   },
   "mastercard": "Mastercard MDES",
   "starknet": "Starknet",
-  "---3": {
+  "---4": {
     "type": "separator",
-    "title": "Reference"
+    "title": "Writing & Documentation"
   },
-  "tools": "Tools & Platforms",
+  "writing": "Writing & Documentation",
+  "---5": {
+    "type": "separator",
+    "title": "Troubleshooting"
+  },
   "known-issues": "Known Issues",
   "faq": "FAQ",
-  "---4": {
+  "---6": {
     "type": "separator",
     "title": "Support"
   },

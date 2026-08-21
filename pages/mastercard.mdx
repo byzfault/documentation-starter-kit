@@ -1,8 +1,3 @@
----
-title: "Mastercard MDES Manager"
-description: "Delivery case study: overhauling the customer-facing surface of Mastercard's MDES card tokenisation platform. 949 support tickets analysed, 379 pages consolidated to 200 in DITA XML, 12 patterns across 100+ screens."
----
-
 import { Callout } from 'nextra/components'
 
 # Mastercard · MDES Manager
@@ -23,13 +18,14 @@ The platform was not the problem. The platform is mature. The problem was that t
 
 1. **User guide overhaul.** Full structural and editorial rework of the 379-page guide, consolidated to roughly 200 pages in DITA XML without cutting coverage. The reduction came from removing duplication, collapsing near-identical procedures into reusable topics, and killing sections that documented removed behaviour.
 2. **Product UX content.** Revision across more than 100 product screens, with 12 reusable content patterns established so future features land consistently instead of restarting the argument each time.
-3. **AI assistant R&D.** A proof of concept for a conversational assistant on the platform, benchmarked against Klarna's assistant, Bank of America's Erica and Morgan Stanley's internal knowledge base deployment.
+3. **Delivery guides.** 14 customer-facing guides built from an analysis of 949 support tickets, structured for both human readers and retrieval by an LLM.
+4. **AI assistant R&D.** A proof of concept for a conversational assistant on the platform, benchmarked against Klarna's assistant, Bank of America's Erica and Morgan Stanley's internal knowledge base deployment.
 
 ## Decisions That Shaped It
 
 **Consolidate rather than rewrite.** A clean-sheet rewrite of 379 pages would have taken longer and lost accumulated accuracy. Restructuring against the DITA topic model preserved what was correct and exposed what was duplicated.
 
-**Let the support data set the priority.** 949 tickets is a better guide to what customers cannot work out than any internal opinion, mine included. The programme was scoped and sequenced from what the tickets ranked, not from what anyone internally assumed.
+**Let the support data set the priority.** 949 tickets is a better guide to what customers cannot work out than any internal opinion, mine included. The delivery guides exist because the tickets said they were needed, in the order the tickets ranked them.
 
 **Write for retrieval as well as reading.** Financial institutions are putting internal assistants over vendor documentation. Content chunked with self-contained topics and explicit headings works for both a human scanning it and a retrieval system indexing it, so I structured it that way from the start rather than retrofitting later.
 
@@ -47,14 +43,15 @@ Product owners across MDES feature areas, engineering, UX design, accessibility,
 
 - A 379-page guide reduced to roughly 200 pages, restructured in DITA XML and maintainable topic by topic
 - 12 content patterns adopted across the product interface, applied to more than 100 screens
+- 14 delivery guides covering the highest-volume support themes
 - A benchmarked AI assistant concept assessed against comparable deployments in financial services
 
-## Why This Matters for Forward Deployed Work
+## Why This Matters for Delivery Roles
 
-This is a programme delivery engagement inside a payments platform, with content as the deliverable. Scope negotiated against a live product, priorities set from operational data, multiple stakeholder groups with competing terminology, a structured toolchain with real constraints, and a fixed publication pipeline. Substitute the artefact and the job is the same one I have been doing since the CTO roles: go in, find the real problem, scope it against live constraints, and ship it.
+This is a programme delivery engagement inside a payments platform, with content as the deliverable. Scope negotiated against a live product, priorities set from operational data, multiple stakeholder groups with competing terminology, a structured toolchain with real constraints, and a fixed publication pipeline. Substitute the artefact and the job is the same one I have been doing since the CTO roles.
 
 ---
 
 → [Starknet](/starknet) for the blockchain infrastructure contract
-→ [Portfolio](/portfolio) for tools I built and the other case study
+→ [Delivery Track Record](/delivery) for the leadership history
 → [Contact](/contact) to discuss a role

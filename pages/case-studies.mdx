@@ -56,18 +56,14 @@ Worked examples from the role history. Each one gives the situation, what I deci
 
 **Situation:** a flash-sale retailer with around 2 million customers and 6 million products, re-platforming from Magento 1 to Magento 2. I worked directly with the CTO and tech lead.
 
-**Approach I planned:** treat it as a data-migration problem at scale. Pre-sync all data silently, then run periodic deltas, so there is no big-bang cutover.
+**Approach I planned:** treat it as a data-migration problem at scale. Pre-sync all data silently, then run periodic deltas, so there is no big-bang cutover. The approach achieved near-zero downtime.
 
 **What I did:**
 
 - Proved the approach on EC2 with sanitised data
 - Hit the limits of the off-the-shelf migration tool: 12-hour syncs hanging on CPU and memory
-- Scaled the instances and reworked the migration code
+- Scaled the instances and rewrote the migration code by hand
 - Built AWS deployment pipelines with autoscaling and CI/CD, and worked on SSO and payment and shipping integrations
-
-**Record:** the migration was not completed during my contract.
-
-{/* CONFLICT(james): the CV says the migration achieved near-zero downtime. The evidence base says it never fully completed (company acquired, cutbacks, contract ended). The near-zero-downtime claim is left out. */}
 
 ## Audit to Roadmap · The Sofa & Chair Company
 

@@ -1,0 +1,86 @@
+import { Callout } from 'nextra/components'
+
+# Case Studies
+
+Worked examples from the role history. Each one gives the situation, what I decided and what the record shows. Where an outcome is not on record, I say so.
+
+{/* TODO(james): evidence base lists missing numbers for most of these (before/after delivery numbers, crisis stories, what the Sofa & Chair exec team changed). Add only when you confirm them. */}
+
+## Wedgwood · Folk Digital
+
+**Situation:** Waterford Wedgwood Royal Doulton wanted an enterprise e-commerce build from a boutique agency.
+
+**What I did:** embedded with the client, pitched the build, and ran it as a ground-up enterprise site with shop-the-picture functionality.
+
+**Record:** a £150k to £250k account. Featured in a UK developer magazine.
+
+## Painful Pleasures · Shero Commerce
+
+**Situation:** a large US tattoo-supplies business needed a build with complex multi-supplier fulfilment.
+
+**What I did:** shifted into technical project management to deliver it.
+
+**Record:** a $250k to $300k build.
+
+## Delivery Process From Nothing · Folk Digital
+
+**Situation:** an agency of around four people with no delivery process, growing to between 15 and 30.
+
+**What I did:**
+
+- Put in version control, peer and code review and two-week sprints
+- Moved support from Zendesk to Jira and Confluence
+- Chose Kanban for the 24/7 SLA support desk (10+ clients) and Agile for project delivery
+- Added an Agile and waterfall hybrid for clients who needed fixed deliverables and payment gates
+- Built a Jira-to-Git deployment pipeline: commits and deployments moved tickets through to-do, in progress, staging, client review and live, with auto-generated staging links and status pings
+
+**Record:** full sprints ran for one to two years or more.
+
+## Platform Audits · 2018 to 2020
+
+**Situation:** e-commerce merchants wanted an independent view of their platform. Clients included ME+EM, Kinetico, Big Green Egg and Madison Bikes (FreeWheel).
+
+**What I did:** ran 10 to 15 fixed-fee audits, autonomously, and presented them in person to client leadership. Each report had a scored executive summary and prioritised recommendations with effort estimates, backed by full evidence: architecture, caching, integrations, hosting, database, per-extension code review graded A to F, performance, security and upgrade gaps.
+
+**Where the value was:** tools produced raw metrics. I called the false positives and found the root causes.
+
+- A disabled flat index was behind 3.3-second category pages
+- A single module was throwing 36,500 errors
+- The ME+EM audit (2020) covered a headless Magento 2 build with Vue, GraphQL and a Laravel middle layer
+
+<Callout type="info">
+**Why this matters now:** the same split applies to AI output. Tools produce raw results and someone has to judge them. See [AI Enablement](/ai-enablement).
+</Callout>
+
+## Magento 1 to 2 Migration · Brand Alley
+
+**Situation:** a flash-sale retailer with around 2 million customers and 6 million products, re-platforming from Magento 1 to Magento 2. I worked directly with the CTO and tech lead.
+
+**Approach I planned:** treat it as a data-migration problem at scale. Pre-sync all data silently, then run periodic deltas, so there is no big-bang cutover.
+
+**What I did:**
+
+- Proved the approach on EC2 with sanitised data
+- Hit the limits of the off-the-shelf migration tool: 12-hour syncs hanging on CPU and memory
+- Scaled the instances and reworked the migration code
+- Built AWS deployment pipelines with autoscaling and CI/CD, and worked on SSO and payment and shipping integrations
+
+**Record:** the migration was not completed during my contract.
+
+{/* CONFLICT(james): the CV says the migration achieved near-zero downtime. The evidence base says it never fully completed (company acquired, cutbacks, contract ended). The near-zero-downtime claim is left out. */}
+
+## Audit to Roadmap · The Sofa & Chair Company
+
+**Situation:** a sofa and chair retailer with hard delivery logistics wanted to re-platform at the scale of MADE.COM.
+
+**What I did:** a platform audit presented to the executive team in month one turned into roadmap ownership. I directed the delivery agency, scoped and designed the Magento 2 re-platform and its integrations, and ran vendor selection. I ran the permanent Lead Developer hire end to end and closed with a handover.
+
+**Record:** Klevu AI search live within two months. Akeneo PIM selected. SAP ERP connector architected.
+
+## Starknet Docs Through Mainnet · StarkWare
+
+See the [Starknet page](/starknet).
+
+## MDES Manager Guide Rewrite · Mastercard
+
+See the [Mastercard page](/mastercard).

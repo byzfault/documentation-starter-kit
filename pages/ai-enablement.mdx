@@ -1,0 +1,57 @@
+import { Callout } from 'nextra/components'
+
+# AI Enablement
+
+How I help teams adopt LLM tooling, and where the evidence comes from. Every item here comes from work I did, mostly at Mastercard.
+
+<Callout type="warning">
+**Scope of my code claim:** I read and review code. I ship with agentic tooling. I do not hand-write production code, and from-scratch coding tests are my weakest area. I am strongest at architecture, review and running delivery. If your role needs someone writing production code line by line, I am the wrong hire.
+</Callout>
+
+{/* TODO(james): no named enterprise AI deployment is live yet. When the Mastercard content-review agents ship, add the line "Built and deployed AI content-review agents for a Mastercard product team" here and on the home page. Evidence base targets mid-November 2026. */}
+
+## What I Have Delivered
+
+### LLM-driven rewrite of a 379-page guide
+At Mastercard I rewrote the MDES Manager user guide into about 200 pages of DITA XML, using LLM tooling, with standardised terminology, tone and formatting. I worked section by section with product managers, product and marketing. Details on the [Mastercard page](/mastercard).
+
+### RAG-ready content repository
+I designed and built the content repository behind Mastercard's conversational-AI proof of concept: 14 delivery guides in GitHub. Each guide has self-contained, intent-tagged sections and Q&A pairs, chunked and terminology-controlled for retrieval accuracy.
+
+**Precision on the claim:** I built the content and its architecture. I did not build the assistant itself.
+
+### LLM-assisted review every release cycle
+I review 30 to 40 screens per release against Mastercard's content standards, with an LLM doing the first pass.
+
+### AI content-review agents (in scoping)
+I am scoping content-review agents with the MDES design team, on Figma agent skills and Copilot. These are not live yet. I will list them as delivered when they are.
+
+## How I Work With Agentic Tooling
+
+- **Tools:** Claude Code, the Claude API, MCP and agent skills, every working day
+- **Design pattern:** the model advises and vetoes, deterministic code executes. Every LLM call goes through one gateway, every verdict is logged and graded
+- **Earned authority:** a model gets more autonomy only after its logged verdicts show it has earned it. I use this on my own autonomous trading agent, described on [Independent Builds](/projects)
+- **Review:** someone has to understand what the code does and answer for it. That is the part of the job I keep
+
+## Where My Judgment Goes
+
+AI makes drafting cheap. These parts still need a person who is accountable for them:
+
+- **Standards reconciliation:** turning inconsistent guideline documents into instructions an agent can apply, and deciding the ambiguous cases
+- **False-positive control:** an agent that flags the wrong things at scale is worse than no agent. Define the quality bar and test it on real work
+- **Scoping:** deciding which use cases carry real value and which are demos
+- **Adoption:** fitting the tool into the team's existing workflow so it stays in use
+
+I did the same split in my platform audits. Tools produced raw metrics. The value was calling the false positives and finding the root causes. See [Case Studies](/case-studies).
+
+## Earlier Evidence of Driving Adoption
+
+- **Folk Digital:** built the delivery process from nothing and got a team to adopt it: version control, code review, sprints, Jira and Confluence. New Relic went in as standard on every build
+- **Klevu:** onboarded and documented an AI search product for merchants and developers, and hosted developer webinars
+- **StarkWare:** docs-as-code, analytics-led prioritisation and automation experiments against a constantly shifting protocol roadmap
+
+## What I Do Not Claim
+
+- A named enterprise AI deployment. The first one is the Mastercard agent work above
+- Hands-on production coding
+- Formal compliance or AML expertise. My payments exposure is on the security and third-party side

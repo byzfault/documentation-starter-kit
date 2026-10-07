@@ -1,89 +1,115 @@
 import { Callout } from 'nextra/components'
 
-# Delivery Track Record
+# Leadership & Delivery
 
-Twenty years of building software and running the teams that ship it. This page covers the leadership and delivery side. For consultancy, audits and architecture work see [Architecture & Audits](/architecture). For the recent payments and blockchain contracts see [Mastercard MDES](/mastercard) and [Starknet](/starknet).
+Twenty years of building software and running the teams that ship it. This page covers the leadership and delivery side. For consultancy, audits and architecture see [Consultancy, Audits & Klevu](/architecture). For payments and blockchain see [Mastercard MDES](/mastercard) and [Starknet](/starknet). For the dated record see [Role History](/history).
 
 ## Role Progression
 
-Developer → Lead Developer → CTO (Folk Digital, UK) → CTO (Shero Commerce, US) → Senior Solutions Architect → Delivery and architecture consulting
+Developer, then Lead Developer and DevOps Engineer, then CTO at Folk Digital (UK), then CTO at Shero Commerce (US). After that: senior developer, solutions architect and independent consultant.
 
-Each step widened the scope rather than replacing what came before. I still read the code. I just spend more of my time on the decisions that sit above it.
+My last role leading engineers directly was CTO at Shero, to March 2018. At Sofa & Chair (2020 to 2021) I directed a delivery agency and ran a permanent hire. I now work on AI adoption.
+
+{/* TODO(james): evidence base says the last hands-on engineering leadership role ended 2021; career_insights says last team 2018 to 2021. Confirm how you want recency worded. */}
 
 ---
 
-## CTO · Folk Digital (UK) and Shero Commerce (US)
+## CTO · Folk Digital (UK), 2014 to 2016
 
-Two chief technology officer roles at digital agencies, one either side of the Atlantic. Both were owner-level positions: I sat in the room where the commercial and technical direction got decided, and I carried the consequences.
+Boutique brand-led agency for luxury and fashion clients. I held the highest technical position: solution architecture, platform strategy and engineering delivery across concurrent enterprise accounts.
 
 **What I owned:**
 
-- Engineering headcount, hiring and mentoring across distributed teams of up to 20
-- Platform architecture for client builds and internal products
-- DevOps, CI/CD, environment strategy and release process
-- Delivery standards, estimation, code review culture and definition of done
-- Technical due diligence on new business, including which work to turn down
+- A team of 12 to 15 mixed-skill developers, organised in pods
+- The full people cycle: CV screening, recruiters, multi-stage interviews with a working task, hiring, weekly 1:1s, mentoring, work allocation and the hard calls
+- Pre-sales and scoping: sizing, integration feasibility and resourcing for sales. I pitched to Wedgwood and Pepe Jeans and co-owned the client-signed scoping document
+- 4 to 10 builds a year, the largest around £300k with enterprise licensing, with me as technical project manager on the bigger ones
+- Client steering sessions, proposals, architecture documentation and integration specifications
+- Cloud infrastructure, DevOps, security and performance
 
-**Distributed by default.** The teams spanned multiple countries and time zones well before it was standard practice. That means async handover, written decisions, and process that survives people being offline for eight hours at a stretch.
+**A seat in the leadership meeting.** I sat on the leadership and operations meeting as the technical voice for the business.
 
 <Callout type="info">
-**On the owner-level part.** Being CTO at an agency is not only an engineering job. You are pricing risk, defending estimates to clients who want them lower, and deciding when the honest answer is that the plan will not work. I have made that call in front of paying clients more than once.
+**Scope of the CTO title.** I owned delivery and team decisions outright. I influenced the larger strategic architecture and partnership calls and did not always win them. The agency was small and those calls were contested.
 </Callout>
+
+### Integrations and infrastructure
+
+- **Payments and shipping:** Sage Pay, WorldPay and PayPal, and shipping with complex multi-country rules
+- **ERP and PIM:** Microsoft Dynamics NAV, NetSuite, Sage and SAP, mostly flat-file over SFTP with reconciliation flags
+- **Performance:** Redis and Memcached, Varnish full-page cache with custom invalidation, load balancing and horizontal scaling, Cloudflare CDN and WAF, Jenkins deployment, Docker in development
+- **Monitoring:** New Relic rolled out as standard, with tuned alerting sold as part of the SLA
+- **Security:** OWASP-based hardening after real incidents (SQL and file injection, a publicly exposed database export), IP allow-listing, credential and SSH rotation, and a third-party pen-test company
+
+{/* TODO(james): evidence base open item: Folk team size, 12 vs 15 (CV Folk entry says 12 to 15; evidence base CTO era says up to 12 direct reports). Site follows the CV. */}
 
 ---
 
-## Agency Delivery
+## Lead Developer and DevOps Engineer · Folk Digital, 2012 to 2014
 
-Enterprise e-commerce delivery for brands with real revenue on the line and no tolerance for a bad release.
+Promoted as the agency grew from around 4 people to 15 to 30. I set up the delivery process from nothing. More on [Case Studies](/case-studies).
 
-**Client work included:**
+- Version control, peer and code review, and two-week sprints
+- Zendesk, then Jira and Confluence
+- Kanban for the 24/7 SLA support desk (10+ clients) and Agile for project delivery, with a hybrid for fixed-deliverable clients
+- Self-managed hosting brought in house with a hosting partner
 
-- **Wedgwood** · heritage retail, international catalogue
-- **Hackett London** · premium menswear, multi-territory storefronts
-- **Turnbull & Asser** · luxury retail, bespoke ordering journeys
-- **MADE.COM** · high-volume furniture e-commerce
-- **Pernod Ricard** · global drinks brand, brand and campaign platforms
+---
 
-**What that delivery involved:**
+## CTO · Shero Commerce (US), 2017 to March 2018
 
-- Scoping and phasing programmes with fixed launch dates
-- Integrating platforms with ERP, PIM, payment providers and fulfilment
-- Performance work under peak trading load
-- Migrations where the old system had to keep running until the new one was proven
-- Stakeholder management across marketing, trading, IT and the board
+US agency specialising in enterprise commerce for American retail and B2B clients. I joined as solutions architect and stepped up to interim CTO. Around 25 to 30 people, with a core engineering team of 15 to 20 in Albania.
 
-**The pattern that repeats:** the technical problem is rarely the hard part. The hard part is a client with a launch date, three stakeholder groups who want different things, and a legacy integration nobody has documented. That is the job.
+- Technical strategy and solution design. I ran the development team meetings, co-scoped builds, unblocked developers and advised the owners
+- Pre-sales: pitches, RFPs and detailed scoping for enterprise builds on Magento, Shopify and BigCommerce, including headless builds with React and Vue
+- Process: agile, peer and code review, CI/CD, linting and coding standards
+- Infrastructure: AWS for peak-traffic commerce, with Auto Scaling, ELB, S3, CDN and WAF and template-based deployment
+
+{/* TODO(james): evidence base Shero line says "20+ engineers and PMs across two offshore teams (US and Albania)"; CV says 25 to 30 people with a core team of 15 to 20 in Albania. Site follows the CV. Shero start month also open (evidence base: about mid-2017). */}
+
+---
+
+## Agency Client Work
+
+Enterprise e-commerce for brands with real revenue on the line.
+
+**Clients at Folk Digital:** Wedgwood, Waterford, Hermès, Gieves & Hawkes, Hackett London, Paco Rabanne, Pepe Jeans, Amanda Wakeley and Finisterre.
+
+{/* TODO(james): Turnbull & Asser appears in the evidence base Folk client list but not on the CV. Left off. Previous site versions named it. */}
+
+**Other consulting clients:** Pernod Ricard, Canary Wharf Group and Big Green Egg.
+
+**MADE.COM** was a Senior Backend Developer role in 2018, not an agency client.
 
 ---
 
 ## How I Run Delivery
 
-**Scope.** Get the shape of the work agreed in writing before anyone estimates it. Most overruns I have seen were scope disputes wearing an engineering costume.
+**Scope.** Get the shape of the work agreed in writing before anyone estimates it.
 
-**Decisions.** Write them down, with the reasoning and the discarded options. A decision nobody can reconstruct in six months gets relitigated in six months.
+**Decisions.** Write them down, with the reasoning and the discarded options.
 
-**Cadence.** Short feedback loops, working software early, and a release process boring enough that nobody dreads Fridays.
+**Cadence.** Short feedback loops and a release process boring enough that nobody dreads Fridays.
 
 **Escalation.** Bad news travels fast or it compounds. I would rather tell a client in week two that the date is at risk than in week nine that it has gone.
 
-**Handover.** Every engagement ends. The measure of a good one is whether the team can carry it without me.
+**Handover.** Every engagement ends. The measure of a good one is whether the team can carry the work without me.
 
 ---
 
 ## Team Leadership
 
-- Hiring, onboarding and progression for engineers at all levels
-- Mentoring leads into their first management roles
-- Code review and quality standards that raise the floor without stalling delivery
-- Performance conversations, including the difficult ones
-- Keeping engineers close enough to the commercial context to make sensible trade-offs on their own
+- Weekly 1:1s, and deep ones. I adapted how I communicated to each person
+- Hiring with a working task in the interview
+- Mentoring weaker developers until they were useful
+- Hard conversations. I have had to let a developer go, and I did not enjoy it
 
-**What I look for in a team:** people who flag problems early, write things down, and can explain their work to somebody outside engineering. Those three habits are worth more than raw output.
+**What I look for in a team:** people who flag problems early, write things down, and can explain their work to somebody outside engineering.
 
 ---
 
 ## Next
 
-→ [Architecture & Audits](/architecture) for consultancy and technical review work
-→ [Mastercard MDES](/mastercard) and [Starknet](/starknet) for the recent infrastructure contracts
+→ [Case Studies](/case-studies) for worked examples
+→ [Role History](/history) for the dated record
 → [Contact](/contact) to discuss a role

@@ -1,98 +1,88 @@
 import { Callout } from 'nextra/components'
 
-# Architecture & Audits
+# Consultancy, Audits & Klevu
 
-Independent consultancy work: architecture reviews, code and platform audits, and solutions architecture for product companies. This is the work clients bring me in for when they need somebody who can read the system and then tell them the truth about it.
+Independent work from April 2018: platform and code audits, solutions architecture and developer relations. This is the work clients brought me in for when they needed somebody who could read the system and tell them the truth about it.
 
-## Architecture Reviews
+## Platform and Code Audits (2018 to 2020)
 
-**What a review covers:**
+Productised, fixed-fee, enterprise-grade audits for e-commerce merchants. 10 to 15 engagements, delivered autonomously and presented in person to client leadership. Clients included ME+EM, Kinetico, Big Green Egg and Madison Bikes (FreeWheel).
 
-- Platform and integration architecture, including where the coupling actually is rather than where the diagram says it is
-- Data flows, ownership boundaries and failure modes
-- DevOps, CI/CD, environment parity and release risk
-- Scalability under the load the business expects, not the load the current traffic suggests
-- Security and compliance posture at the architectural level
+**What a client got:** a scored executive summary and prioritised recommendations with effort estimates, backed by full evidence:
 
-**What the client gets:** a written assessment with findings ranked by risk and cost to fix, a target architecture, and a sequenced route from one to the other. Written so the CTO and the finance director can both act on it.
+- Solution architecture, indexer, cache and cron review
+- ERP and search integrations
+- Hosting and deployment (Magento Commerce Cloud, Platform.sh) and Git flow
+- Database review
+- Per-extension code review, graded A to F
+- Functional review against the original spec, and error analysis
+- Front-end and application performance (GTmetrix, WebPageTest, Lighthouse, New Relic, Blackfire)
+- Redis and Varnish architecture, and server tuning
+- Security: OWASP Top 10, malware scans and a core diff
+- Upgrade gap analysis and vendor-transition runbooks
 
 <Callout type="info">
-**Why the written output matters.** An architecture review that lives in somebody's head or in a two-hour call gets forgotten by the next planning cycle. The document is the deliverable. It has to survive contact with people who were not in the room.
+**Where the value was.** Judgment over tool output. I called the false positives, found root causes and made the architectural calls. See [Case Studies](/case-studies) for examples.
 </Callout>
 
 ---
 
-## Code and Platform Audits
+## Klevu · Senior Solutions Architect and Developer Relations (2018 to 2020)
 
-Audits usually start with one of three questions: can this codebase carry the roadmap, what did we actually buy in that acquisition, or why does every release hurt.
+Enterprise AI-powered search SaaS, now Athos Commerce. It enriched catalogues with NLP and served them by API for natural-language and image search across Magento, BigCommerce and Shopify.
 
-**What I look at:**
+**What I did:**
 
-- Code quality, test coverage and the real cost of change in the hot paths
-- Dependency health, upgrade debt and abandoned libraries
-- Build and deployment pipeline, including how long it takes to get a fix to production
-- Documentation and knowledge concentration, meaning who has to be awake for the system to be fixable
-- Delivery process, estimation accuracy and where the time is going
+- Developer relations, onboarding and documentation for the integrations: installation guides, API testing and usage docs
+- Fed developer friction back into the product
+- Hosted developer webinars, including a PWA session for around 50 merchants
+- Worked the forums and advocated for the product
+- Wrote long-form technical and marketing content on NLP, AI-generated search content and indexing
 
-**Tone of the output:** direct. Clients are paying for an assessment, not reassurance. I flag what is fine as clearly as I flag what is not, because a report where everything is a problem is as useless as one where nothing is.
+**Where my background mattered:** I had trialled Klevu as search at Folk before it became a client. I knew what a merchant's stack looks like from the inside.
 
----
-
-## Klevu · Senior Solutions Architect (2019–2021)
-
-AI-powered site search for e-commerce, sold to merchants and implemented by agencies. I came in on the architecture and implementation side, covering how the product got into complex retail stacks and what had to be true for it to work.
-
-**The problem:** the platform was capable, and every implementation was different. Merchants, agencies and in-house developers were all integrating along different paths, and the fastest way to unblock them was not more support headcount.
-
-**What I owned:**
-
-- Integration architecture across Magento, Shopify, BigCommerce and custom platforms
-- Solution design with merchants and implementation partners, including pre-sales technical scoping
-- The full technical documentation estate: integration guides, Search, Recommendations and Analytics API references, JavaScript SDK guides, merchant configuration and tuning
-- Platform setup on GitBook, information architecture, contribution workflow and search
-- Feeding recurring integration failures back into the product and engineering roadmap
-
-**Where my background mattered:** I had already spent years delivering enterprise e-commerce for retail brands. I knew what a merchant's stack looks like from the inside, which edge cases were coming, and why an integration that works in a demo falls over against a real catalogue.
-
-**Outcome:** agencies could integrate without a support ticket for every project, onboarding time dropped, and the technical content became something sales could put in front of a prospect.
+{/* TODO(james): previous site claims removed as unsupported by CV or evidence base: ownership of docs.klevu.com, GitBook platform, pre-sales scoping at Klevu, outcomes "onboarding time dropped" and "sales could put the content in front of a prospect". Klevu start month is open in the evidence base. */}
 
 ---
 
-## Consultancy Engagements
+## Architecture Engagements
 
-Independent architecture and delivery consulting, with an emphasis on Web3, SaaS and technical infrastructure.
+### The Sofa & Chair Company (Aug 2020 to Sep 2021)
 
-**Typical engagement shapes:**
+Solutions architect and interim technical lead, fully remote. Magento 2 re-platform of a MADE.COM-scale operation. Vendor selection covered AI search and PIM. See [Case Studies](/case-studies).
 
-- Fixed-scope architecture or code audit with a written report and a follow-up session
-- Solution design for a specific integration or migration
-- Delivery review where a programme is late and nobody can agree on why
-- Interim technical leadership while a client hires permanently
+### Pernod Ricard (2018)
 
-**How I price it:** by scope, agreed up front. I would rather turn down work than take a mandate that cannot succeed.
+Content-first Magento build and AWS architecture.
+
+### Canary Wharf Group and Big Green Egg (2017)
+
+Canary Wharf: international sites for property developments on a bespoke PHP build. Big Green Egg: platform audit and Brightpearl ERP scoping.
 
 ---
 
 ## Technical Ground
 
-**Engineering:**
-- Languages: PHP, JavaScript, TypeScript, Python, Node.js
-- Frameworks: React, Next.js, Laravel, Express
-- Infrastructure: AWS, Docker, Kubernetes, CI/CD
-- Databases: MySQL, PostgreSQL, MongoDB, Redis
+**Architecture and platforms:**
+- Solution architecture for enterprise commerce and integrations
+- ERP integration: Microsoft Dynamics NAV, NetSuite, Sage, SAP
+- Headless commerce (Vue, React, GraphQL), Magento 1 and 2, Shopify, BigCommerce
+- PIM (Akeneo) and search (Klevu, Elasticsearch, Solr)
 
-**Domains:**
-- Enterprise e-commerce, ERP, PIM and fulfilment integration
-- Payment integration and card tokenisation
-- Layer 2 blockchain protocols, smart contracts, ZK proof systems
-- Site search, recommendations and merchandising platforms
+**Infrastructure and security:**
+- AWS (EC2, S3, ELB, Auto Scaling, RDS), self-managed LAMP and Nginx
+- Redis, Memcached, Varnish, Cloudflare CDN and WAF
+- New Relic, Blackfire, Lighthouse, Jenkins, Docker, CI/CD
+- OWASP Top 10, hardening and incident response, pen-test vendor management
 
-**Reading, not shipping:** Solidity, Cairo, Rust. Enough to review, document and hold a technical conversation, not enough to claim I would ship production contracts.
+**Languages (working level):** PHP, JavaScript and TypeScript, SQL (MySQL, Postgres). Magento depth runs to 2020. I read and review code; I ship with agentic tooling.
+
+**Reading level:** Cairo. Enough to review and document.
 
 ---
 
 ## Next
 
-→ [Delivery Track Record](/delivery) for the CTO and agency delivery history
+→ [Leadership & Delivery](/delivery) for the CTO history
 → [Tools & Platforms](/tools) for the working stack
-→ [Contact](/contact) to discuss an audit or review
+→ [Contact](/contact) to discuss a role

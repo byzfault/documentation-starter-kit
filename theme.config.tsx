@@ -2,9 +2,9 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
-const IDENTITY = 'AI Enablement & Technical Delivery Lead · ex-agency CTO · Mastercard, StarkWare'
+const IDENTITY = 'Technology Delivery Leader · CTO · Solutions Architect · Documentation Lead'
 const DESCRIPTION =
-  'James Aindow. I help teams adopt AI inside complex technical environments. Twenty years across enterprise e-commerce, blockchain infrastructure and card payments. Twice agency CTO, with teams of 12 to 20+. Recent work on Mastercard MDES and Starknet. I read and review code; I ship with agentic tooling.'
+  'James Aindow. Technology delivery leader with 20 years across enterprise e-commerce, blockchain infrastructure and card payments. Twice agency CTO, with teams of 12 to 20+. Work on Mastercard MDES and Starknet. I read and review code. I ship with agentic tooling.'
 const SITE_URL = 'https://jamesaindow.co.uk'
 
 const personSchema = {
@@ -15,7 +15,7 @@ const personSchema = {
   description: DESCRIPTION,
   url: SITE_URL,
   email: 'mailto:consult@jamesaindow.co.uk',
-  sameAs: ['https://www.linkedin.com/in/james-a-3988212aa/'],
+  sameAs: ['https://www.linkedin.com/in/james-aindow'],
   knowsAbout: [
     'AI enablement',
     'Agentic tooling',
@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
   logo: (
     <span>
       James Aindow{' '}
-      <span style={{ opacity: 0.7 }}>· AI Enablement &amp; Technical Delivery</span>
+      <span style={{ opacity: 0.7 }}>· Technology Delivery Leader &amp; CTO</span>
     </span>
   ),
 
@@ -47,7 +47,7 @@ const config: DocsThemeConfig = {
   },
 
   footer: {
-    text: 'AI enablement and technical delivery for payments and blockchain infrastructure',
+    text: 'Technology delivery for payments, blockchain and enterprise platforms',
   },
 
   feedback: {

@@ -2,33 +2,39 @@ import { Callout } from 'nextra/components'
 
 # Writing & Documentation
 
-Writing is a capability I bring to delivery and architecture work, not a separate career. It is the reason my architecture reviews get acted on and my delivery decisions survive the people who made them leaving. This page holds the samples and the method.
+I led documentation at StarkWare and write for Mastercard. The writing sits alongside engineering leadership and AI enablement. It is the reason my reviews get acted on and my decisions survive the people who made them leaving. This page holds the samples and the method.
 
 <Callout type="info">
-**Where this sits.** Two recent contracts were content-led: [Mastercard MDES](/mastercard) and [Starknet](/starknet). Both are told as delivery stories on their own pages, because that is what they were. This page is about the craft underneath them.
+**Where this sits.** Two recent roles had documentation titles: [Mastercard MDES](/mastercard) and [Starknet](/starknet). They are told as delivery and AI stories on their own pages. This page is about the craft underneath them.
 </Callout>
+
+{/* TODO(james): removed as unsupported: cairo-lang.org ownership and link, docs.klevu.com ownership and link, "working code samples", "a dozen pages". The Starknet link to docs.starknet.io is kept. Klevu dates corrected to 2018 to 2020. */}
 
 ## Samples
 
 ### Starknet
 
-I owned [docs.starknet.io](https://docs.starknet.io) and [cairo-lang.org](https://www.cairo-lang.org) from 2022 to 2023. The design has moved on since, and a good deal of the core content is still mine.
+I was Documentation Lead for the open-source [Starknet docs](https://docs.starknet.io) from 2022 to 2023.
 
-**What it demonstrates:** zero-knowledge proof systems and a new smart contract language explained without a maths degree, working code samples, and one estate serving protocol researchers and application developers at the same time.
+**What it demonstrates:** zero-knowledge proof systems and a new smart contract language explained for readers from ZK researchers to dApp developers.
 
 ### Klevu
 
-I built the technical documentation estate at [docs.klevu.com](https://docs.klevu.com) alongside the solutions architecture work, 2019 to 2021.
+Installation guides, API testing and usage docs for the Klevu integrations, alongside the solutions architecture work, 2018 to 2020.
 
-**What it demonstrates:** multi-platform integration guides, complete API reference, and material written for merchants and developers who need different things from the same product.
+**What it demonstrates:** integration guides for Magento, BigCommerce and Shopify, written for merchants and developers who need different things from the same product.
 
 ### Mastercard MDES
 
 Enterprise structured authoring in DITA XML, under Mastercard brand standards and W3C COGA accessibility guidance. The output is not public. The scope and approach are on the [MDES page](/mastercard).
 
+### Platform Audit Reports
+
+Between 2018 and 2020 I wrote 60 to 165-page structured technical reports for clients, with a scored summary and a ranked recommendations table. They are client confidential. The format is on [Consultancy, Audits & Klevu](/architecture).
+
 ### This Site
 
-A working sample in itself. Nextra, custom information architecture, component usage, and a conceit carried consistently across a dozen pages without becoming a joke that outstays its welcome.
+A working sample in itself. Nextra, custom information architecture and a documentation conceit carried across the whole site.
 
 ---
 
@@ -48,7 +54,7 @@ I read the code, run the product and test the procedure before documenting it. T
 
 ### Structure for retrieval
 
-Self-contained topics, explicit headings, no meaning buried in the transition between paragraphs. This has always been good practice for a reader scanning a page. It is now also what makes content usable by an internal assistant, which enterprise clients increasingly expect.
+Self-contained topics, explicit headings, no meaning buried in the transition between paragraphs. This has always been good practice for a reader scanning a page. It is also what makes content usable by an AI assistant. I built the repository behind Mastercard's conversational-AI proof of concept this way. See [AI Enablement](/ai-enablement).
 
 ---
 
@@ -85,10 +91,10 @@ Self-contained topics, explicit headings, no meaning buried in the transition be
 
 ## Tooling
 
-**Structured authoring:** DITA XML, DITA-OT for PDF output, AsciiDoc
+**Structured authoring:** DITA XML, DITA-OT, AsciiDoc
 **Docs-as-code:** Docusaurus, Nextra, GitBook, MkDocs, Markdown, MDX
-**Quality:** Vale, markdownlint, review workflows in Git
-**Pipelines:** GitHub Actions, GitLab CI, Vercel, Netlify
+**Quality:** Vale, review workflows in Git
+**Pipelines:** GitHub Actions, GitLab CI
 
 ---
 

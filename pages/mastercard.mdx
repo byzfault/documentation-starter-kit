@@ -2,56 +2,55 @@ import { Callout } from 'nextra/components'
 
 # Mastercard · MDES Manager
 
-**Engagement:** Senior contract, November 2025 to present
-**Product:** MDES Manager, Mastercard's self-service interface to the Mastercard Digital Enablement Service
-**Users:** Issuers, processors, payment service providers and internal Mastercard operations teams
+**Role:** Senior Technical Writer and Consultant (Documentation and AI Content)
+**Engagement:** Contract, November 2025 to present. Full time to March 2026, then a retained cadence of release-cycle work
+**Product:** MDES Manager, the tokenisation platform issuers and processors use to configure card products for Apple Pay, Google Pay and Samsung Pay
+**Also:** MIIG documentation, and a local DITA-OT toolchain
 
-MDES is the tokenisation layer behind Apple Pay, Google Pay and card-on-file digital wallets across the Mastercard network. MDES Manager is how customer institutions configure and operate it. My remit covers the platform's entire customer-facing content estate: the user guide, the product interface, and the delivery material that sits between them.
+{/* TODO(james): Mastercard start month. CV: Nov 2025. Evidence base interview detail: "start Sep 2025". Evidence base timeline: Nov 2025. Site follows the CV. Full-time start: evidence base says Dec 2025; CV just says "full time to March 2026". */}
+{/* TODO(james): page count. CV says 380. Evidence base metrics say 379 (its narrative also says "~300"). Site uses 379. */}
+{/* TODO(james): removed from this page as not in the CV or evidence base: "12 reusable content patterns", benchmarks against Klarna, Bank of America's Erica and Morgan Stanley, and "14 delivery guides built from an analysis of 949 tickets". Confirm before restoring any of them. */}
+{/* TODO(james): ticket reduction result is unknown (evidence base open item). No outcome claim is made. */}
 
-## The Situation I Inherited
+MDES is the tokenisation layer behind Apple Pay, Google Pay and Samsung Pay. MDES Manager is how customer institutions configure it. I am a contractor on its documentation, content design and AI content work.
 
-A 379-page user guide in DITA XML that had grown by accretion across years of product change. Interface copy written by whoever shipped the feature. A support queue absorbing questions the documentation should have answered, and a set of delivery guides that did not exist yet.
+## The Situation
 
-The platform was not the problem. The platform is mature. The problem was that the material describing it had been maintained page by page and never governed as a system.
+A 379-page user guide, interface copy from many hands, and a support queue absorbing questions the documentation should have answered. The platform was mature. The material describing it had been maintained page by page and never governed as a system.
 
 ## Scope
 
-1. **User guide overhaul.** Full structural and editorial rework of the 379-page guide, consolidated to roughly 200 pages in DITA XML without cutting coverage. The reduction came from removing duplication, collapsing near-identical procedures into reusable topics, and killing sections that documented removed behaviour.
-2. **Product UX content.** Revision across more than 100 product screens, with 12 reusable content patterns established so future features land consistently instead of restarting the argument each time.
-3. **Delivery guides.** 14 customer-facing guides built from an analysis of 949 support tickets, structured for both human readers and retrieval by an LLM.
-4. **AI assistant R&D.** A proof of concept for a conversational assistant on the platform, benchmarked against Klarna's assistant, Bank of America's Erica and Morgan Stanley's internal knowledge base deployment.
+1. **User guide overhaul.** Rewrote the 379-page MDES Manager user guide into a guide of about 200 pages in DITA XML. Standardised terminology, tone and formatting, to reduce onboarding support tickets. I worked section by section with product managers, product and marketing, and used LLM tooling for the rewrite
+2. **Prioritisation.** Owned prioritisation for the cross-functional overhaul. I analysed 949 support tickets to decide what to fix first, weighing user impact against engineering and design cost
+3. **Content design across about 150 configuration screens.** I adjudicated competing feedback from designers, engineers and PMs against Mastercard brand standards and W3C and COGA accessibility guidelines
+4. **RAG-ready content repository.** I designed and built the repository (14 delivery guides, in GitHub) behind Mastercard's conversational-AI proof of concept. Sections are self-contained and intent-tagged, with Q&A pairs, chunked and terminology-controlled for retrieval accuracy
+5. **Ongoing LLM-assisted review.** 30 to 40 screens per release cycle against the content standards
+6. **AI content-review agents (in scoping).** Scoping agents with the MDES design team, using Figma agent skills and Copilot. Not live yet
+
+**Precision on item 4:** I built the content and the content architecture the assistant draws on. I did not build the assistant.
 
 ## Decisions That Shaped It
 
-**Consolidate rather than rewrite.** A clean-sheet rewrite of 379 pages would have taken longer and lost accumulated accuracy. Restructuring against the DITA topic model preserved what was correct and exposed what was duplicated.
+**Let the support data set the priority.** 949 tickets is a better guide to what users cannot work out than any internal opinion, mine included. Fixes went in order of user impact against cost.
 
-**Let the support data set the priority.** 949 tickets is a better guide to what customers cannot work out than any internal opinion, mine included. The delivery guides exist because the tickets said they were needed, in the order the tickets ranked them.
+**Write for retrieval as well as reading.** A section that stands alone and says what question it answers works for a person scanning the guide and for a retrieval system pulling one chunk.
 
-**Write for retrieval as well as reading.** Financial institutions are putting internal assistants over vendor documentation. Content chunked with self-contained topics and explicit headings works for both a human scanning it and a retrieval system indexing it, so I structured it that way from the start rather than retrofitting later.
-
-**Patterns before pages on the UX side.** Fixing 100 screens one at a time produces 100 opinions. Twelve agreed patterns produce a system, and the next hundred screens cost far less.
+**Adjudicate, with the standards as the referee.** Designers, engineers and PMs disagree. The brand and accessibility standards decide the argument, so they are the reference point each time.
 
 ## Stakeholders
 
-Product owners across MDES feature areas, engineering, UX design, accessibility, brand and legal review, and the support organisation whose ticket data drove the priorities. The constraints came from Mastercard's brand writing standards, W3C COGA accessibility guidance, and the DITA XML toolchain that produces the published output.
+Product managers, product and marketing, designers and engineers across MDES feature areas, and the MDES design team on the AI work. The constraints came from Mastercard's brand standards, W3C and COGA accessibility guidance, and the DITA XML toolchain.
 
 <Callout type="info">
-**The real work.** The writing is the visible part. The engagement runs on getting product owners across separate feature areas to agree on shared terminology, holding a structure while the product keeps shipping underneath it, and keeping review cycles moving without stalling releases.
+**The real work.** The writing is the visible part. The engagement runs on agreeing terminology across feature areas, holding a structure while the product keeps shipping, and keeping review cycles moving.
 </Callout>
 
-## Outcomes
+## Why This Matters for AI Enablement
 
-- A 379-page guide reduced to roughly 200 pages, restructured in DITA XML and maintainable topic by topic
-- 12 content patterns adopted across the product interface, applied to more than 100 screens
-- 14 delivery guides covering the highest-volume support themes
-- A benchmarked AI assistant concept assessed against comparable deployments in financial services
-
-## Why This Matters for Delivery Roles
-
-This is a programme delivery engagement inside a payments platform, with content as the deliverable. Scope negotiated against a live product, priorities set from operational data, multiple stakeholder groups with competing terminology, a structured toolchain with real constraints, and a fixed publication pipeline. Substitute the artefact and the job is the same one I have been doing since the CTO roles.
+This is AI work inside a regulated tier-1 payments company: an LLM-driven rewrite, content designed for retrieval, and review run against standards every release. The next step is agents that apply those standards. See [AI Enablement](/ai-enablement).
 
 ---
 
 → [Starknet](/starknet) for the blockchain infrastructure contract
-→ [Delivery Track Record](/delivery) for the leadership history
+→ [AI Enablement](/ai-enablement) for how I work with LLM tooling
 → [Contact](/contact) to discuss a role

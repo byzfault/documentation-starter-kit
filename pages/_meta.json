@@ -3,33 +3,41 @@
   "quick-start": "Quick Start",
   "---": {
     "type": "separator",
-    "title": "Delivery Track Record"
+    "title": "AI Enablement"
   },
-  "delivery": "Leadership & Delivery",
+  "ai-enablement": "AI Enablement",
+  "projects": "Independent Builds",
   "---2": {
+    "type": "separator",
+    "title": "Experience"
+  },
+  "history": "Role History",
+  "delivery": "Leadership & Delivery",
+  "case-studies": "Case Studies",
+  "---3": {
     "type": "separator",
     "title": "Architecture & Audits"
   },
   "architecture": "Consultancy, Audits & Klevu",
   "tools": "Tools & Platforms",
-  "---3": {
+  "---4": {
     "type": "separator",
     "title": "Payments & Blockchain"
   },
   "mastercard": "Mastercard MDES",
   "starknet": "Starknet",
-  "---4": {
+  "---5": {
     "type": "separator",
     "title": "Writing & Documentation"
   },
   "writing": "Writing & Documentation",
-  "---5": {
+  "---6": {
     "type": "separator",
     "title": "Troubleshooting"
   },
   "known-issues": "Known Issues",
   "faq": "FAQ",
-  "---6": {
+  "---7": {
     "type": "separator",
     "title": "Support"
   },

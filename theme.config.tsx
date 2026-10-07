@@ -2,9 +2,9 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
-const IDENTITY = 'Senior Technical Leader · Programme Delivery & Solutions Architecture'
+const IDENTITY = 'AI Enablement & Technical Delivery Lead · ex-agency CTO · Mastercard, StarkWare'
 const DESCRIPTION =
-  'James Aindow. Twenty years in enterprise e-commerce and payments engineering. Two CTO roles, distributed teams of up to 20, platform architecture and delivery ownership. Recent work on Mastercard MDES tokenisation and Starknet infrastructure.'
+  'James Aindow. I help teams adopt AI inside complex technical environments. Twenty years across enterprise e-commerce, blockchain infrastructure and card payments. Twice agency CTO, with teams of 12 to 20+. Recent work on Mastercard MDES and Starknet. I read and review code; I ship with agentic tooling.'
 const SITE_URL = 'https://jamesaindow.co.uk'
 
 const personSchema = {
@@ -17,11 +17,14 @@ const personSchema = {
   email: 'mailto:consult@jamesaindow.co.uk',
   sameAs: ['https://www.linkedin.com/in/james-a-3988212aa/'],
   knowsAbout: [
-    'Programme delivery',
-    'Solutions architecture',
+    'AI enablement',
+    'Agentic tooling',
+    'RAG content design',
+    'Engineering leadership',
+    'Technical delivery',
     'Payments infrastructure',
     'Card tokenisation',
-    'Stablecoin infrastructure',
+    'Ethereum Layer 2',
     'Enterprise e-commerce',
   ],
 }
@@ -30,7 +33,7 @@ const config: DocsThemeConfig = {
   logo: (
     <span>
       James Aindow{' '}
-      <span style={{ opacity: 0.7 }}>· Delivery &amp; Solutions Architecture</span>
+      <span style={{ opacity: 0.7 }}>· AI Enablement &amp; Technical Delivery</span>
     </span>
   ),
 
@@ -44,7 +47,7 @@ const config: DocsThemeConfig = {
   },
 
   footer: {
-    text: 'Delivery and architecture for payments and blockchain infrastructure',
+    text: 'AI enablement and technical delivery for payments and blockchain infrastructure',
   },
 
   feedback: {

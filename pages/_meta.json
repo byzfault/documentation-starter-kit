@@ -1,12 +1,6 @@
 {
   "index": "Introduction",
   "quick-start": "Quick Start",
-  "---": {
-    "type": "separator",
-    "title": "AI Enablement"
-  },
-  "ai-enablement": "AI Enablement",
-  "projects": "Independent Builds",
   "---2": {
     "type": "separator",
     "title": "Experience"
@@ -31,6 +25,12 @@
     "title": "Writing & Documentation"
   },
   "writing": "Writing & Documentation",
+  "---": {
+    "type": "separator",
+    "title": "AI Enablement & Builds"
+  },
+  "ai-enablement": "AI Enablement",
+  "projects": "Independent Builds",
   "---6": {
     "type": "separator",
     "title": "Troubleshooting"

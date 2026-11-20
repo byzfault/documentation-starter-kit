@@ -1,19 +1,27 @@
 {
   "index": "Introduction",
   "quick-start": "Quick Start",
-  "---2": {
+  "---": {
     "type": "separator",
-    "title": "Experience"
+    "title": "AI Enablement"
   },
-  "history": "Role History",
-  "delivery": "Leadership & Delivery",
-  "case-studies": "Case Studies",
+  "mastercard-figma-skills": "Agentic Content Review · Mastercard",
+  "ai-enablement": "AI Enablement",
+  "trafficcount": "Traffic Counting from Video",
+  "projects": "Independent Builds",
   "---3": {
     "type": "separator",
-    "title": "Architecture & Audits"
+    "title": "Solutions Architecture"
   },
   "architecture": "Consultancy, Audits & Klevu",
+  "case-studies": "Case Studies",
   "tools": "Tools & Platforms",
+  "---2": {
+    "type": "separator",
+    "title": "CTO & Leadership"
+  },
+  "delivery": "CTO & Engineering Leadership",
+  "history": "Role History",
   "---4": {
     "type": "separator",
     "title": "Payments & Blockchain"
@@ -25,14 +33,6 @@
     "title": "Writing & Documentation"
   },
   "writing": "Writing & Documentation",
-  "---": {
-    "type": "separator",
-    "title": "AI Enablement & Builds"
-  },
-  "ai-enablement": "AI Enablement",
-  "mastercard-figma-skills": "AI Content Rules for Figma",
-  "trafficcount": "Traffic Counting from Video",
-  "projects": "Independent Builds",
   "---6": {
     "type": "separator",
     "title": "Troubleshooting"

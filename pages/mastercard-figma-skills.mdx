@@ -1,61 +1,78 @@
 import { Callout } from 'nextra/components'
 
-# AI Content Rules for Figma · Mastercard
+# Agentic Content Review · Mastercard
 
-**Role:** Senior Technical Writer · Consultant (Documentation and AI Content)
-**Status:** In progress, October 2026. Design and evaluation plan only. No results yet
-**Scope:** content review for an enterprise payments product, applied to interface copy in Figma and run through Copilot
+**Role:** Content Systems and AI Enablement Consultant
+**When:** October to November 2026
+**Status:** Proof of concept, delivered as a versioned bundle. Light testing. Not in production
+**Scope:** AI review of interface copy for MDES Manager, against the team's written content standards, in Figma's AI agent and Claude Code
 
-{/* TODO(james): CONFIDENTIALITY. This page stays unpublished until you have confirmed with Mastercard that it can go live. It names no screens, rule counts, staff or internal documents. Remove anything you or Mastercard are not comfortable with. */}
+{/* TODO(james): CONFIDENTIALITY. Confirm with Mastercard, or decide yourself, that this page can go live. It names no staff, no screens and no internal documents. It does give counts (27 skills, about 75 defined, 166 screens, 28 captures) that are already on your CVs. Remove anything you are not comfortable with. */}
 
 <Callout type="warning">
-**Early work.** This is the architecture and the plan for testing it. I will add outcomes when there are outcomes.
+**What this is and is not.** I designed and built this with the product's design and content team as a proof of concept. It has had light testing. It is not live in production and I claim no measured saving. The client's content designer contributed code to the orchestrator.
 </Callout>
 
 ## The Problem
 
-Interface copy on an enterprise product comes from many hands and is reviewed screen by screen against written standards. A reviewer applies the same dozens of rules by hand, every release. Some rules are mechanical, such as casing and label wording. Others need judgment, such as tone in an error message and whether the copy fits the task.
+Interface copy on an enterprise product comes from many hands and is reviewed screen by screen against written standards. A reviewer applies the same dozens of rules by hand, every release. Some rules are mechanical, such as casing and full stops. Others need judgment, such as tone in an error message.
 
-The question is how to hand part of that review to an AI agent without producing a confident tool that flags the wrong things at scale.
+The question was how to hand part of that review to an AI agent without building a confident tool that flags the wrong things at scale.
 
-## The Approach
+## What I Built
 
-**Split the rules by how they can be applied.** I started from an existing content audit and sorted every rule it implied:
+| Part | What it is |
+|---|---|
+| Audit | 166 product screens and 28 message captures reviewed. Each finding became a rule, traced to a source guideline or marked as a project decision |
+| Skills | A library of AI review skills. 27 delivered in a versioned bundle with a change log, about 75 defined. Each has a Figma agent version and a Claude Code version |
+| Orchestrator | The pipeline that runs the skills on a screen and writes one result |
+| Evals | A rubric of six checks per screen, a run folder per run, and traces. The harness repeats the client's own tests flow by flow |
 
-| Kind | Examples | How it runs |
-|---|---|---|
-| Deterministic | Casing, punctuation, label wording, term swaps | Small single-purpose checks. One rule per skill, pass or fail |
-| Judgment | Tone, empathy in errors, task fit | A short core guideline the model loads as context |
+I also ran the workshop that set the decisions the rules follow.
 
-**One rule per skill.** If a skill needs the word "and", it becomes two. Each skill has one trigger, one outcome, before and after examples and a stated exception. A reviewer can say pass or fail without opinion.
+## How the Orchestrator Works
 
-**One guideline for the rest.** Tone and apologetic language depend on the situation: whose fault the failure is, how risky the action is. Cutting that into separate skills would let each one optimise its own rule and undo the others, so it stays in one place with principles, examples and a rule for resolving conflicts.
+1. **Read the screen once.** One step works out what kind of screen it is and who uses it. Every skill gets the same brief
+2. **Detect in parallel.** Every detector runs on the same frozen original text. No skill reads another skill's edits
+3. **Settle conflicts in one place.** A single precedence table decides when two rules disagree
+4. **Write once.** One write per screen replaces a chain of patches
+5. **Run mechanical rules in code.** Casing, full stops, spelling, dates and times never reach the model. A deterministic pass applies them afterwards
+6. **Guard the facts twice.** A fact ledger, then a token comparison against the original: numbers, codes, units, placeholders, variables, URLs and fixed names
+7. **Grade separately.** A grader that has not seen the writer's work scores the final copy against the rubric. A check that passed on the original and fails on the result is a regression
 
-**Deterministic first, model second.** Anything a rule can check goes to a check that never drifts. The model is used only where judgment is needed.
+## Decisions That Shaped It
 
-**Every conflict goes on a register.** Where two standards disagree, the question has an owner and a status. It does not get decided inside a prompt.
+**Sort the rules by how reliably they can be applied.** Simple rules have one test and pass or fail. Hybrid rules are a pattern plus a decision. Probabilistic rules need language judgment. Code does what code can check. A model only does judgment.
 
-## Platform Limits Shape the Design
+**One rule family per skill, with its evidence.** Every rule is quoted from a guideline or marked as the project's own decision. If the guideline is silent, the skill says so.
 
-The delivery platforms set the boundaries: how many skills a request can invoke, what an agent can read on the canvas and what it can change. I treat those as test questions to answer early, not assumptions. The rules are written once as plain Markdown so they can be wrapped for Figma and Copilot without being rewritten.
+**Let the platform limits shape the design.** Figma's agent takes one Markdown file per skill, with no scripts and no folders. So the skills carry no code and load shared knowledge by name.
 
-## How I Plan to Evaluate It
+**Record judgment calls once.** A term register keeps each call the orchestrator makes on a board, so the next run makes the same call.
 
-- **Real scenarios.** Real screens from a release, not invented examples
-- **Rule-level scoring.** For each rule: how often it fires correctly, how often it fires wrongly and what it misses
-- **False-positive control.** An agent that flags the wrong things is worse than none, so the quality bar is set before the rollout
-- **Human preference on tone.** Reviewers compare agent suggestions with their own edits
-- **A baseline.** The same screens reviewed by hand, to see whether the agent saves time without lowering quality
+**Test the way the client tests.** The evals mirror the content designer's own method, so the two sets of results can be read side by side.
+
+## Honest Limits
+
+- It is a proof of concept. Testing was light, and on constructed test strings
+- Not every skill was re-run after the last rewrite
+- Token savings from the orchestrator are not measured
+- Some rulings are still open, such as full stops on single sentences and contractions
+- I do not know which model sits behind Figma's agent. The rules are plain Markdown so they survive a change of model
 
 ## Why It Matters
 
-This is solution design applied to content. The decisions are the same as in any architecture review: where deterministic code ends and a model begins, what the failure modes are, how it is tested and who owns each rule. It builds on my earlier [MDES Manager work](/mastercard) and the review practice described under [AI Enablement](/ai-enablement).
+This is solution design applied to AI. The decisions are the ones in any architecture review: where deterministic code ends and a model begins, what the failure modes are, how it is tested and who owns each rule. Most people who use an LLM can produce an output. Fewer can show the guard on facts, the regression rule and the separate grader.
+
+It builds on my earlier [MDES Manager work](/mastercard) and the practice described under [AI Enablement](/ai-enablement).
 
 ## What I Do Not Claim
 
-- Any measured outcome. The agents are not live
-- That the model behind Copilot is known or fixed. I design the rules to survive a change of model
-- Anything about internal documents, screens or figures
+- A production deployment or a rollout across the organisation
+- Any measured saving
+- That I built a custom agent or model. The work is standards, skills, orchestration and testing
+- Sole authorship of the orchestrator
+- Anything about internal documents, screens or people
 
 ---
 

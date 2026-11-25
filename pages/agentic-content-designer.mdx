@@ -1,0 +1,182 @@
+import { Callout } from 'nextra/components'
+
+# Case Study: An Agentic Content Designer in Production
+
+**Client:** a global financial services company. Named under NDA only
+**When:** 13 October to 2 November 2026
+**My role:** I designed the system and directed the build, as an independent consultant working with the client's lead designer and content designer
+**Status:** v1 delivered and in use by the client's design and content team. A second version is being scoped
+**Built with:** Claude Code, Python, Figma through MCP, and Figma's AI agent
+
+<Callout type="info">
+**Confidentiality.** The client is under NDA. This page names no company, product, person or screen. The numbers come from the project's own run records.
+</Callout>
+
+## In Short
+
+A large financial company wanted an AI agent to review and improve the wording on its product screens, to the standard of its own content designers.
+
+Many teams are trying to do this. Most attempts stop at one prompt that rewrites a screen. That works in a demo and fails on the two hundredth screen.
+
+I designed an agentic content designer. A designer points it at a Figma board, a selection or a set of screenshots. It reads every text field, applies the company's content standards, rewrites what needs rewriting and returns the copy before and after, with each change marked for review. It has been in use as v1 since November 2026.
+
+The design decisions matter more than the tooling, so most of this page is about them:
+
+1. Code does what code can check. A model does only the judgment
+2. Many agents read. One agent writes, once
+3. Risk is a dial with settings. It is a choice the designer makes
+4. Facts are guarded in layers
+5. A separate grader scores every run, and it has not seen the writer's work
+
+## The Problem
+
+The product is an enterprise web application. Its users are specialist staff at the company's business customers. A sentence they misread can become a wrong setting in a financial system.
+
+The wording on its screens comes from many hands. The content team reviews it screen by screen against written standards: casing, terminology, tone, sentence length, how an error is worded, what a button says. A reviewer applies the same dozens of rules by hand on every release.
+
+Two things made this hard to hand to an AI agent.
+
+**The rules are different kinds of rule.** "Use sentence case" has one right answer. "Put the important information first" needs judgment. A model treats both the same way, as text to interpret. So it gets the first kind wrong some of the time. A script never does.
+
+**A confident rewrite can change a fact.** A model asked to shorten a sentence will sometimes drop the condition that made it true. On this product that is a serious fault.
+
+## What Is Running
+
+| Part | What it is |
+|---|---|
+| The audit | 166 product screens and 28 message captures reviewed by hand. Each finding became a rule, traced to a source guideline or recorded as a project decision |
+| The skills | 27 content skills in a versioned pack of 35. Each covers one family of rules and carries its own evidence and examples |
+| The orchestrator | The pipeline that runs the skills over a board and produces one result per text field |
+| The eval harness | A rubric, answer keys, regression fixtures and a run folder for every run |
+
+The 27 content skills are sorted by how reliably each can be applied:
+
+| Class | Skills | Who decides | Who applies the change |
+|---|---|---|---|
+| Code | 11 | Code | Code |
+| Hybrid | 1 | A model decides each term | Code |
+| Prefilter | 3 | Code finds candidates, a model judges them | The writer |
+| Measure | 2 | Code measures, and reports a hint | The writer |
+| Model | 10 | A model | The writer |
+
+<img
+  src="/case-studies/agentic-content-designer/pipeline.svg"
+  alt="The pipeline. The original copy is frozen. Detectors read it in parallel and report findings only. One precedence table resolves conflicts. One writer edits each screen once. A code sweep applies the mechanical rules last. A fact check in code and an independent grader verify the result."
+  style={{ width: '100%', marginTop: 24 }}
+/>
+
+*The pipeline for the full mode. Only the writer and the code sweep change copy.*
+
+## Decision 1: Code for What Code Can Check, a Model Only for Judgment
+
+Every rule went through one question first: can a script decide this with the same answer every time?
+
+Eleven skills could. Spelling, banned words, casing, full stops, dates, times, contractions, slashes and first-use acronyms are all Python. No model decides any of them, in any mode. Where the code cannot settle a case, it leaves the text as written and lists it for a person. It never passes the case to a model to guess.
+
+This split did three things.
+
+- **It made the mechanical rules complete.** A model skips fields. Code does not. After each run, a second piece of code with separate logic re-checks every field against every mechanical rule. The bar is 100% of audited fields with no open violation, and a run that misses it fails
+- **It made the model's job smaller.** The writer never sees a casing rule. It is asked only about voice, structure and reader effort, which is where a model is useful
+- **It made faults repairable.** The code sweep always runs last, over whatever the writer produced. If the writer introduces a casing fault, code fixes it
+
+The orchestrator has three modes built on this idea. The first runs only the code skills, and no model reads or writes the copy. The second adds terminology: a model decides which term is right and code applies it. The third is the full audit with a writer. Each mode is the one before it plus more, so a full run can be checked against a code-only run on the same board. The mechanical part of the two results must match.
+
+## Decision 2: Many Readers, One Writer
+
+The first design was a chain. Skill one edited the screen, skill two edited the result, skill three edited that, and so on through the list.
+
+It drifted. It behaves like the whisper game: each skill rewrites a rewrite, and after several passes the sentence has moved away from what the original said. Order starts to matter too. Whichever skill runs last wins, and nobody chose that.
+
+The second design removed the chain.
+
+1. **Freeze the original.** The board's text is captured once, hashed and made read-only. Every later step refuses to run if it has changed
+2. **Detect in parallel.** Each detector reads the same frozen original and reports findings. It edits nothing, and it never sees another detector's output
+3. **Resolve in one place.** A single precedence table settles conflicts between rules: the agreed term list first, then authoring rules, then voice, then sentence shape. Known conflicts sit in their own table with the decision and the reason
+4. **Write once.** One writer per screen receives the resolved findings as constraints and makes a single edit. Nothing goes back for a second attempt
+
+Priority between rules now lives in a table a content designer can read and change. Before, it was a side effect of the order the steps ran in.
+
+Parallel detection has a second benefit. Detectors are fresh agents with a narrow brief and a small slice of the board, so each one carries less context than a single long conversation would.
+
+## Decision 3: Risk Is a Dial
+
+One skill reduces cognitive load: the effort a reader spends holding a sentence in mind and working out what to do. I rebuilt it several times before it was reliable. The version that worked stopped treating the task as one instruction.
+
+Cognitive load is a spectrum of edits, and each step along it removes more load and risks more of the meaning. The skill has three settings.
+
+| Setting | What it changes | Risk to meaning |
+|---|---|---|
+| 1. Light | Removes fixed filler phrases from a closed list | None. It later became a code rule |
+| 2. Standard | Also rewrites grammar and phrasing: clauses inside clauses, long noun strings, distance between a subject and its verb | Low. Every condition, exception and scope is protected |
+| 3. Deep | Also splits long sentences and cuts clauses an expert reader can assume | Real. Every cut is reported |
+
+The thirteen components behind those settings come from the research on sentence processing and from accessibility guidance on plain language. Each one is assigned to the lowest setting that can apply it safely.
+
+Two mechanisms make the higher settings usable. Before any edit, the skill tags each clause of the original: condition, exception, scope, warning, or decoration from a closed list. Then it works one change at a time and checks each change against that map. A change that fails is undone and the run carries on, so one bad edit never blocks the safe ones.
+
+The designer picks the setting. A team that wants zero risk runs setting 1 across the whole product. A team polishing one onboarding flow runs setting 3 and reads the report. The same idea shapes the orchestrator's three modes.
+
+## Decision 4: Guard the Facts in Layers
+
+A rewrite must keep every fact. No single check catches every kind of fact, so there are three.
+
+1. **The writer lists the facts** of each field before it rewrites it: numbers, limits, conditions, names, consequences, sequence
+2. **Code compares tracked words** in the original and the final text, in both directions: numbers, codes, dates, limits and negations such as "only", "unless" and "never". This check does not use the writer's list, so a fact the writer missed is still protected
+3. **A grader compares the two texts** for facts written in words, which a token comparison cannot see
+
+A field that fails a fact check keeps its original text and is held for a person. On one early full run the checks caught two fields where the writer had changed a fact. Both went out with the original wording.
+
+## Decision 5: A Grader That Has Not Seen the Work
+
+The summary of a run reports a rubric. It does not report "issues found", because a count of changes says nothing about whether the copy got better.
+
+The grader is a fresh agent. It sees no findings, no constraints and none of the writer's reasoning. It scores the original copy and the final copy against the same rubric, screen by screen. An item that passed on the original and fails on the result is a regression, and regressions go first in the report.
+
+The definition of done is concrete. The content team had reviewed a board of 166 screens by hand and named it the baseline. A run is done when its screens could sit on that board without anyone seeing which ones the agent wrote.
+
+Every run writes its data to a run folder: the frozen inventory, each agent's findings, the resolved table, the final text, the verdicts, timing and token counts. The evals read those files. They do not read a chat transcript.
+
+## What the Run Records Show
+
+The project has 17 scored runs. Three from the delivery date show the design working.
+
+| Run | Result |
+|---|---|
+| Code-only mode, 13 screens | 434 text fields read, 89 changed. 100% mechanical coverage of 406 audited fields. No open violations and no regressions |
+| Code-only mode, 21 screens | 1,169 text fields read, 227 changed. 100% mechanical coverage of 813 audited fields. No open violations and no regressions |
+| Full mode, the same 21 screens | 236 changes. The grader passed 89 of 105 rubric items, against 92 of 105 for the original copy, with six regressions named field by field |
+
+The third row is the one I would show a sceptic. That run made 236 changes and every one looked reasonable on its own. Without an independent grader it would have been reported as a success. With one, the team can see which six fields got worse and why.
+
+I do not have a measured time saving and I am not going to estimate one. What the records support is narrower and more useful: the mechanical standards are now applied to every field, on every run, with proof.
+
+## What I Would Tell a Team Starting This
+
+- **Sort your rules before you write a prompt.** Most style guides are part mechanical and part judgment. Put the mechanical part in code and you remove most of the model's errors at no cost
+- **Do not chain agents that edit.** Let many read and one write
+- **Decide what counts as done before you build.** Ours was a board of screens a person had already reviewed
+- **Grade against the original.** A tool that makes 200 changes has told you nothing until something independent says the result is better
+- **Give the user the risk setting.** A content designer knows which flow can take an aggressive edit. The agent does not
+- **Fit the platform.** Figma's agent takes one Markdown file per skill, with no scripts. So the skills are plain Markdown that any model can read, and the code lives in the orchestrator
+
+## Where This Sits in My Work
+
+I spent most of my career as a solutions architect and agency CTO in e-commerce, then moved into technical writing and content design in 2022.
+
+This project needed both. The pipeline is system design: where code ends and a model begins, where state lives, what fails and how it is caught. The rules are content design: what a clear sentence is, and which words an expert reader needs. Few roles ask for both. This kind of system does.
+
+I built it with Claude Code. I read and review code and I ship with agentic tooling. The client's content designer also wrote orchestrator code, and the standards belong to the client's design and content team.
+
+## Limits
+
+- It is a v1. The code-only mode is proven by measurement. The judgment skills still produce regressions on some screens, and the harness reports them
+- The answer keys cover some flows and not others
+- The runs recorded here read screens from screenshots. Writing changes back to a Figma board happens on the client's side, and I do not hold those records
+- It is an internal tool for a design team. It does not publish to customers without a person reviewing the marked changes
+- There is no measured saving in hours or cost
+
+---
+
+→ [AI Enablement](/ai-enablement) for how I work with LLM tooling
+→ [Architecture and audits](/architecture) for the solutions architecture record
+→ [Contact](/contact) to discuss a role

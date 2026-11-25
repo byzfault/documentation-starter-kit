@@ -4,7 +4,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const IDENTITY = 'Solutions Architect · AI Enablement · CTO'
 const DESCRIPTION =
-  'James Aindow. Solutions architect and twice agency CTO with 20 years in enterprise commerce and card payments. Recent work: agentic AI content review for a Mastercard product team. I read and review code. I ship with agentic tooling.'
+  'James Aindow. Solutions architect and twice agency CTO with 20 years in enterprise commerce and card payments. Recent work: an agentic content designer in production at a global financial services company. I read and review code. I ship with agentic tooling.'
 const SITE_URL = 'https://jamesaindow.co.uk'
 
 const personSchema = {

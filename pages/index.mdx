@@ -6,25 +6,24 @@ Enterprise Commerce, Payments, Agentic AI
 
 > **Profile status:** Open to roles | **Last updated:** November 2026 | **Version:** 5.0
 
-{/* Headline follows James's ruling of 20 Nov 2026: Mastercard agentic work first, then solutions architecture, AI enablement and CTO. */}
-{/* TODO(james): CONFIDENTIALITY. The Mastercard section below gives skill and screen counts. They are already on your CVs. Confirm you are happy for them to be public before this goes live. */}
+{/* James, 25 Nov 2026: the agentic work is a production v1 and the flagship. The client is under NDA, so it is not named against this work anywhere on the site. */}
 
 <Callout type="info">
 **Why this site reads like documentation:** this is how I handle complex systems. Structure first, then the detail, with every claim tied to something I actually did. If you want to see how I would lay out an architecture review, an AI rollout or a delivery plan, you are looking at it.
 </Callout>
 
-## Current Work: Agentic Content Review at Mastercard
+## Current Work: An Agentic Content Designer in Production
 
-Recent work at Mastercard includes an AI content-review system I designed and built with the design and content team for MDES Manager. MDES Manager is the web application card issuers use to configure cards for Apple Pay, Google Pay and Samsung Pay. The system checks interface copy against the team's written standards.
+In late 2026 I designed an agentic content designer for a global financial services company, working with its design and content team. It reviews and rewrites the wording on product screens against the team's written standards. It is in use as v1.
 
-- **The audit.** I audited 166 product screens and 28 message captures. Each finding became a rule, traced to the guideline it came from
-- **The skills.** A library of AI review skills: 27 delivered in a versioned bundle, about 75 defined. Each one runs in Figma's AI agent and in Claude Code
-- **The orchestrator.** Detectors run in parallel on the same frozen text. One precedence table settles conflicts. Mechanical rules run in code, after the model. Facts are guarded twice. A separate grader scores the result against a rubric
-- **The evals.** A harness that repeats the client's own tests flow by flow, with traces, so my results sit beside theirs
+- **The audit.** 166 product screens and 28 message captures reviewed. Each finding became a rule, traced to the guideline it came from
+- **The skills.** 27 content skills in a versioned pack of 35, sorted by how reliably each can be applied. Eleven run as code, with no model involved
+- **The orchestrator.** Detectors read the same frozen original in parallel. One precedence table settles conflicts. One writer edits each screen once. The mechanical rules run in code, last
+- **The evals.** Facts are guarded in layers, and a grader that has not seen the writer's work scores every run against a rubric
 
-This is a proof of concept with light testing. It is not in production and I claim no measured saving. The client's content designer contributed code to the orchestrator.
+The client is under NDA, so the case study names no company or product. The client's content designer also wrote orchestrator code.
 
-→ [Agentic Content Review · Mastercard](/mastercard-figma-skills) for the design and the reasoning
+→ [Case Study: An Agentic Content Designer in Production](/agentic-content-designer) for the design decisions and the run records
 
 ## Overview
 
@@ -32,7 +31,7 @@ I am a solutions architect with 20 years in enterprise commerce and card payment
 
 **Solutions architecture.** I own a design from requirements to handover and present it to the people who sign it off. At Brand Alley I owned the data-migration strategy for a Magento 1 to Magento 2 re-platform with about 2 million customers and 6 million products. At The Sofa & Chair Company I selected Klevu search and Akeneo PIM and designed the SAP ERP connector. I have delivered around 15 fixed-fee platform and code audits to client leadership.
 
-**AI enablement.** I turn a team's written standards into agent workflows that are tested and can be audited. Code does what code can check. A model does the judgment. An eval says whether it worked. The Mastercard work above is the current example, and I use Claude Code every working day.
+**AI enablement.** I turn a team's written standards into agent workflows that are tested and can be audited. Code does what code can check. A model does the judgment. An eval says whether it worked. The agentic content designer above is the current example, and I use Claude Code every working day.
 
 **CTO.** At Folk Digital in London I led a team of 20+ developers and built the delivery process from nothing: hiring, weekly 1:1s, code review, Jira, CI/CD and a 24/7 SLA support desk. At Shero Commerce in New York I was interim CTO with an offshore engineering team of 15 to 20.
 
@@ -43,7 +42,7 @@ I read and review code. I ship with agentic tooling.
 ## Quick Links
 
 <Cards>
-  <Card title="Agentic Content Review · Mastercard" href="/mastercard-figma-skills" />
+  <Card title="Case Study: Agentic Content Designer" href="/agentic-content-designer" />
   <Card title="Quick Start" href="/quick-start" />
   <Card title="AI Enablement" href="/ai-enablement" />
   <Card title="Architecture and Audits" href="/architecture" />
@@ -53,7 +52,7 @@ I read and review code. I ship with agentic tooling.
 
 ## Key Capabilities
 
-- **Agentic AI and evals:** agent skills, orchestration, deterministic guards and graded evals (Claude Code, Claude API, MCP, Figma's AI agent). Built with a product team inside a regulated tier-1 payments company
+- **Agentic AI and evals:** agent skills, orchestration, deterministic guards and graded evals (Claude Code, Claude API, MCP, Figma's AI agent). Built with a product team inside a global financial services company
 - **Solutions architecture:** enterprise commerce and integration architecture, re-platforming and data migration, vendor selection, ERP, PIM, search and payment integrations
 - **Audits:** around 15 fixed-fee platform and code audits, each a scored report presented to client leadership
 - **CTO and engineering leadership:** CTO at two agencies. Hiring, mentoring, pre-sales, scoping and a delivery process built from nothing

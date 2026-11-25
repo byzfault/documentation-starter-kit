@@ -2,6 +2,14 @@ import { Callout } from 'nextra/components'
 
 # Case Study: An Agentic Content Designer in Production
 
+<img
+  src="/case-studies/agentic-content-designer/pipeline.svg"
+  alt="The pipeline. The original copy is frozen. Detectors read it in parallel and report findings only. One precedence table resolves conflicts. One writer edits each screen once. A code sweep applies the mechanical rules last. A fact check in code and an independent grader verify the result."
+  style={{ width: '100%', marginTop: 24 }}
+/>
+
+*The pipeline for the full mode. Only the writer and the code sweep change copy.*
+
 <Callout type="info">
 **Confidentiality.** The client is under NDA.
 </Callout>
@@ -52,14 +60,6 @@ The 27 content skills are sorted by how reliably each can be applied:
 | Prefilter | 3 | Code finds candidates, a model judges them | The writer |
 | Measure | 2 | Code measures, and reports a hint | The writer |
 | Model | 10 | A model | The writer |
-
-<img
-  src="/case-studies/agentic-content-designer/pipeline.svg"
-  alt="The pipeline. The original copy is frozen. Detectors read it in parallel and report findings only. One precedence table resolves conflicts. One writer edits each screen once. A code sweep applies the mechanical rules last. A fact check in code and an independent grader verify the result."
-  style={{ width: '100%', marginTop: 24 }}
-/>
-
-*The pipeline for the full mode. Only the writer and the code sweep change copy.*
 
 ## Decision 1: Code for What Code Can Check, a Model Only for Judgment
 

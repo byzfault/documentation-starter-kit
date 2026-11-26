@@ -22,12 +22,12 @@ export function Banner() {
           <img
             className="ja-banner-lockup ja-banner-lockup-detailed"
             src="/brand/james-aindow-detailed-horizontal-dark.svg"
-            alt="James Aindow, AI Consultancy"
+            alt="James Aindow"
           />
           <img
             className="ja-banner-lockup ja-banner-lockup-simple"
             src="/brand/james-aindow-horizontal-dark.svg"
-            alt="James Aindow, AI Consultancy"
+            alt="James Aindow"
           />
         </>
       )}
@@ -47,8 +47,8 @@ export function Main({ children }: { children: React.ReactNode }) {
 export function Logo() {
   return (
     <span className="ja-logo">
-      <img className="ja-logo-light" src="/brand/james-aindow-horizontal-light.svg" alt="James Aindow, AI Consultancy" width={180} height={33} />
-      <img className="ja-logo-dark" src="/brand/james-aindow-horizontal-dark.svg" alt="James Aindow, AI Consultancy" width={180} height={33} />
+      <img className="ja-logo-light" src="/brand/james-aindow-horizontal-light.svg" alt="James Aindow" width={180} height={33} />
+      <img className="ja-logo-dark" src="/brand/james-aindow-horizontal-dark.svg" alt="James Aindow" width={180} height={33} />
     </span>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { Logo, Main } from './components/banner'
 
 const IDENTITY = 'Solutions Architect · AI Enablement · CTO'
 const DESCRIPTION =
@@ -30,12 +31,14 @@ const personSchema = {
 }
 
 const config: DocsThemeConfig = {
-  logo: (
-    <span>
-      James Aindow{' '}
-      <span style={{ opacity: 0.7 }}>· Solutions Architect · AI Enablement · CTO</span>
-    </span>
-  ),
+  logo: <Logo />,
+
+  // Signal Blue #2F4BFF on Mist, Glow #7B93FF on Ink
+  primaryHue: { light: 233, dark: 229 },
+  primarySaturation: 100,
+
+  // Every page opens with its banner
+  main: Main,
 
   useNextSeoProps() {
     const { asPath } = useRouter()
@@ -63,6 +66,10 @@ const config: DocsThemeConfig = {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content={DESCRIPTION} />
       <meta name="author" content="James Aindow" />
+      <meta name="theme-color" content="#11151C" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+      <link rel="icon" type="image/svg+xml" href="/brand/icon-dark.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       <meta property="og:type" content="profile" />
       <meta property="og:site_name" content="James Aindow" />

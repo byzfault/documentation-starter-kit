@@ -1,0 +1,131 @@
+/* Brand guidelines v1.0, November 2026 */
+:root {
+  --ink: #11151C;
+  --blue: #2F4BFF;
+  --glow: #7B93FF;
+  --slate: #4A5568;
+  --cloud: #E9ECF1;
+  --mist: #F6F7F9;
+  --font-head: 'Space Grotesk', sans-serif; /* 600 */
+  --font-body: 'Inter', sans-serif; /* 400, 500 */
+}
+
+html,
+body {
+  font-family: var(--font-body);
+}
+
+/* Ink and Mist grounds */
+html:not(.dark) body {
+  background-color: var(--mist) !important;
+  color: var(--ink);
+}
+html.dark body {
+  background-color: var(--ink) !important;
+}
+html:not(.dark) .nextra-nav-container-blur {
+  background-color: rgba(246, 247, 249, 0.85) !important;
+}
+html.dark .nextra-nav-container-blur {
+  background-color: rgba(17, 21, 28, 0.85) !important;
+}
+html:not(.dark) .nextra-sidebar-container > div:last-child,
+html:not(.dark) footer {
+  background-color: var(--mist) !important;
+}
+html.dark .nextra-sidebar-container > div:last-child,
+html.dark footer {
+  background-color: var(--ink) !important;
+}
+
+/* Headings in Space Grotesk 600 */
+main h1,
+main h2,
+main h3,
+main h4 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+html:not(.dark) main h1,
+html:not(.dark) main h2,
+html:not(.dark) main h3 {
+  color: var(--ink);
+}
+
+/* Header lockup: simple horizontal, 180px */
+.ja-logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+html.dark .ja-logo-light,
+html:not(.dark) .ja-logo-dark {
+  display: none;
+}
+
+/* Page banners */
+.ja-banner {
+  position: relative;
+  margin: 1.5rem 0 0.5rem;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--ink);
+  aspect-ratio: 3 / 1;
+}
+.ja-banner > img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+html:not(.dark) .ja-banner {
+  box-shadow: 0 1px 2px rgba(17, 21, 28, 0.08), 0 12px 32px -12px rgba(17, 21, 28, 0.35);
+}
+html.dark .ja-banner {
+  outline: 1px solid rgba(233, 236, 241, 0.08);
+  outline-offset: -1px;
+}
+.ja-banner-home > img:first-child {
+  object-position: 100% 50%;
+}
+.ja-banner-lockup {
+  position: absolute;
+  left: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* The detailed lockup needs a mark at least 96px tall. Below that the simple one shows. */
+.ja-banner-lockup-detailed {
+  height: 96px;
+  width: auto;
+  display: none;
+}
+.ja-banner-lockup-simple {
+  width: min(52%, 240px);
+  height: auto;
+}
+@media (min-width: 1100px) {
+  .ja-banner-lockup-detailed {
+    display: block;
+  }
+  .ja-banner-lockup-simple {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .ja-banner {
+    aspect-ratio: 2.4 / 1;
+    border-radius: 10px;
+  }
+}
+
+/* Accent text: Signal Blue on Mist, Glow on Ink (Signal Blue is too dark on Ink) */
+html:not(.dark) [class~='nx-text-primary-600'],
+html:not(.dark) [class~='nx-text-primary-800'] {
+  color: var(--blue) !important;
+}
+html.dark [class~='dark:nx-text-primary-600'],
+html.dark [class~='nx-text-primary-600'] {
+  color: var(--glow) !important;
+}
